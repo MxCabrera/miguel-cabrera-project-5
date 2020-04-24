@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class Main extends Component {
+class Audio extends Component {
   render() {
     return (
       <main>
-          <h2>Character List!</h2>
+        <h1>Such Nice Art!</h1>
       </main>
     )
   }
 }
 
-export default Main;
+export default Audio;

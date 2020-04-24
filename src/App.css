@@ -1,7 +1,26 @@
-
+body {
+  background-image: linear-gradient(#093009, #1F6032, #29773E, #369457, #032202)
+}
 header {
   margin: 0 auto;
   text-align: center;
+  height: 800px;
+}
+.wrapper {
+  max-width: 1600px;
+  width: 80%;
+  margin: 0 auto; 
+}
+
+.flex {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 500px;
+  height: 500px;
 }
 
 .App {
