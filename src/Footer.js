@@ -6,7 +6,7 @@ class Footer extends Component {
     return (
         <footer>
             <div className="copyright">
-                <p>Miguel Cabrera 2020</p>
+          <p>© Miguel Cabrera 2020</p>
             </div>
         </footer>
     )

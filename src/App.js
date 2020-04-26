@@ -21,7 +21,7 @@ import todd from './assets/toddAlquist.mp3';
 import jane from './assets/janeMargolis1.mp3';
 import marie from './assets/marieSchrader.mp3';
 import domingo from './assets/domingoMolina.mp3';
-import salamanca from './assets/salamanca.mp3'
+import salamanca from './assets/salamanca.mp3';
 
 // audio array
 
@@ -120,6 +120,7 @@ class App extends Component {
             <div className="wrapper flex">
               { this.showSounds() }
             </div>
+              <h3 class="intro">Here are the Facts!</h3>
             <span className="wrapper flex space">
             { this.state.breakBadArray.map( ( bad, index ) => {
               return (
@@ -141,6 +142,9 @@ class App extends Component {
             })}
             </span>
           </section>
+          <aside>
+            <h3>Breaking Bad API was used to create this App. Photos and audio files are not mine, and are owned by there respective creators</h3>
+          </aside>
         </main>
         <Footer />
       </>
