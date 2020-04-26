@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
-import Logo from './assets/breakingBad1.png'
-import intro from './assets/introSong.mp3'
+import Logo from './assets/breakingBad1.png';
+import intro from './assets/introSong.mp3';
 
 class Header extends Component {
     badStart = () => {    
         this.audio = new Audio(intro);
         window.scrollTo(0, 800);
-        this.audio.play()
+        this.audio.play();
     };
 
     render() {
@@ -20,8 +20,8 @@ class Header extends Component {
                     <button className="headerButton" onClick={this.badStart}>Click to Start</button>
                 </div>
             </header>
-        )
-    }
-}
+        );
+    };
+};
 
 export default Header;
