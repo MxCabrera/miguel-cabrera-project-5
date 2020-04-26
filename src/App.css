@@ -56,6 +56,19 @@ main {
   margin: 0 auto; 
 }
 
+.space {
+  margin-top: 4rem;
+}
+
+.actorSounds {
+  padding: 3rem 2rem;
+  background-color: gray;
+  margin-bottom: 1rem;
+  border-radius: 50%;
+  border: 2px solid #000;
+  cursor: pointer;
+}
+
 .characterBox {
   background-color: white;
   width: 20%;
@@ -63,6 +76,7 @@ main {
   padding: 1rem; 
   margin: 0 0.5rem 2rem 0;
   background-color: gray;
+  cursor: pointer;
 }
 
 .characterBox:hover {
