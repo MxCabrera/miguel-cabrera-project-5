@@ -1,10 +1,54 @@
 body {
-  background-image: linear-gradient(#093009, #1F6032, #29773E, #369457, #032202)
+  font-size: 62.5%;
+  background-image: linear-gradient(#093009, #1F6032, #29773E, #369457, #032202);
 }
+
+/* header begins here */
+
+
 header {
   margin: 0 auto;
   text-align: center;
-  height: 800px;
+  background-image: linear-gradient(65deg,#093009, #1F6032, #29773E, #032202);
+  padding: 5rem 0;
+  margin-bottom: 1rem;
+}
+
+.headerTitle {
+  font-size: 10rem;
+  margin: 5rem 0 1rem 0;
+}
+
+.headerD {
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+.headerButton {
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+
+/* main starts here  */
+
+
+main {
+  background-image: linear-gradient(45deg,#093009, #1F6032, #29773E, #369457, #032202);
+  padding: 2rem;
+  text-align: center;
+}
+
+.intro {
+  font-size: 3rem;
+}
+
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* align-items: center; */
 }
 .wrapper {
   max-width: 1600px;
@@ -12,16 +56,59 @@ header {
   margin: 0 auto; 
 }
 
-.flex {
-  display: flex; 
-  justify-content: center;
-  align-items: center;
+.characterBox {
+  background-color: white;
+  width: 20%;
+  /* border-radius: 1rem; */
+  padding: 1rem; 
+  margin: 0 0.5rem 2rem 0;
+  background-color: gray;
+}
+
+.characterBox:hover {
+  box-shadow: 2px 2px 15px #000;
+  transform: scale(1.05);
+  background-color: white;
+}
+
+.infoBox {
+  width: 80%;
+  padding: 1.5rem;
+  margin: 0 auto;
+}
+
+ul {
+  list-style: none;
 }
 
 img {
-  width: 500px;
-  height: 500px;
+  width: 100%;
+  height: 90%;
+  /* border-radius: 50%; */
 }
+
+.copyright {
+  background-color: black;
+  text-align: center
+}
+
+.copyright p {
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 2rem 0;
+}
+
+
+
+
+
+
+/* my styles end here  */
+
+
+
+
 
 .App {
   text-align: center;
