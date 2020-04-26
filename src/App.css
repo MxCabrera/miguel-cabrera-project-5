@@ -71,14 +71,14 @@ main {
 }
 
 .actorSounds {
-  font-size: 1.9rem;
-  padding: 5rem 4rem;
+  font-size: 1rem;
   background-color: gray;
   margin-bottom: 1rem;
-  /* border-radius: 50%; */
+  padding: 1rem 0;
   border: 2px solid #000;
   cursor: pointer;
-  margin-right: 0.5rem;
+  width:100%;
+  text-align: center;
 }
 
 .actorSounds:hover {
@@ -105,9 +105,30 @@ main {
 }
 
 .infoBox {
-  width: 80%;
-  padding: 1.5rem;
+  width: 90%;
   margin: 0 auto;
+  text-align: left;
+  padding-bottom: 1rem;
+}
+
+.infoBox h2 {
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.infoBox h3,
+.infoBox p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+  width: 100%;
+}
+
+.infoP {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
 }
 
 ul {
