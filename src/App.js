@@ -90,15 +90,18 @@ class App extends Component {
                     <div className="infoBox">
                       <h2>{ bad.name }</h2>
                       <div className="infoP">
-                        <h3>Nickname: { bad.nickname }</h3>
-                        <p>Birthday: { bad.birthday }</p>
-                        <p>Actor: { bad.portrayed }</p>
-                        <p>Occupation: { bad.occupation } </p>
-                        <p>Health Statue: { bad.status }</p> 
-                        <p>Appearances: { bad.category }</p>
+                        <h3><span className="infoStats">Nickname:</span> { bad.nickname }</h3>
+                        <p><span className="infoStats">Birthday:</span> { bad.birthday }</p>
+                        <p><span className="infoStats">Actor:</span> <a href={audioClips[bad.name].link}>{bad.portrayed}</a></p>
+                        <p><span className="infoStats">Occupation:</span> { bad.occupation } </p>
+                        <p><span className="infoStats">Health Statue:</span> { bad.status }</p> 
+                        <p><span className="infoStats">Appearances:</span> { bad.category }</p>
+                        <p><span className="infoStats">Quote:</span>"{audioClips[bad.name].quote}"</p>
                       </div>
                     </div>
+                    <span className="pin">O</span>
                   </li>
+
                 </div>
               );
             })}
