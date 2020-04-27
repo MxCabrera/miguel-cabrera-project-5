@@ -6,8 +6,6 @@ import Aside from './Aside'
 import axios from 'axios';
 import audioClips from './audioClips'
 import { Howl, Howler } from 'howler';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 
 
 // class component 
@@ -77,31 +75,34 @@ class App extends Component {
       <>
         <Header />
         <main>
-          <h2 className="intro">Click an image to hear a quote from the character!</h2>
+          <h2 className="intro">Albuquerques Most Wanted List</h2>
           <section>
-            <h3 className="intro">Here are the Facts!</h3>
+            <h3 className="hover">If you've seen them, call DEA</h3>
+            <h3 className="hover">*hover & click for info/sounds*</h3>
             <span className="wrapper flex space">
             { this.state.breakBadArray.map( ( bad, index ) => {
               return (
-                <li className="characterBox" key={ index } onClick={ this.playAudio }>
-                  <div>
-                    <img src={ bad.img } alt={ bad.name }/>
-                  </div>
-                  <div className="infoBox">
-                    <h2>{ bad.name }</h2>
-                    <div className="infoP">
-                      <h3>Nickname: { bad.nickname }</h3>
-                      <p>Birthday: { bad.birthday }</p>
-                      <p>Actor: { bad.portrayed }</p>
-                      <p>Occupation: { bad.occupation } </p>
-                      <p>Health Statue: { bad.status }</p> 
-                      <p>Appearances: { bad.category }</p>
+                <div className="actorSound" key={index} onClick={() => this.BadSounds(audioClips[bad.name].sound)}>
+                  <li className="characterBox" key={ index } onClick={ this.playAudio }>
+                    <div>
+                      <img src={ bad.img } alt={ bad.name }/>
                     </div>
-                    <div className="actorSounds" key={index} onClick={() => this.BadSounds(audioClips[bad.name].sound)}>
-                      {bad.name} Quote
+                    <div className="infoBox">
+                      <h2>{ bad.name }</h2>
+                      <div className="infoP">
+                        <h3>Nickname: { bad.nickname }</h3>
+                        <p>Birthday: { bad.birthday }</p>
+                        <p>Actor: { bad.portrayed }</p>
+                        <p>Occupation: { bad.occupation } </p>
+                        <p>Health Statue: { bad.status }</p> 
+                        <p>Appearances: { bad.category }</p>
+                      </div>
+                      {/* <div className="actorSounds" key={index} onClick={() => this.BadSounds(audioClips[bad.name].sound)}>
+                        Click to hear {audioClips[bad.name].label}
+                      </div> */}
                     </div>
-                  </div>
-                </li>
+                  </li>
+                </div>
               );
             })}
             </span>
