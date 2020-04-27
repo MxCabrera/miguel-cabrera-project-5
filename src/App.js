@@ -34,20 +34,20 @@ class App extends Component {
   };
 
 
-  getCharacters = () => {
-    axios.all([
-      axios.get('https://www.breakingbadapi.com/api/characters/'),
-      axios.get('https://www.breakingbadapi.com/api/death-count/'),
-      axios.get('https://www.breakingbadapi.com/api/quotes/'),
-    ]).axios.spread((characters, death, quotes) => {
-      console.log(characters, death, quotes)
-      this.setState({
-        breakBadChar: characters,
-        breakBadQuote: quotes,
-        breakBadDeath: death
-      })
-    })
-  };
+  // getCharacters = () => {
+  //   axios.all([
+  //     axios.get('https://www.breakingbadapi.com/api/characters/'),
+  //     axios.get('https://www.breakingbadapi.com/api/death-count/'),
+  //     axios.get('https://www.breakingbadapi.com/api/quotes/'),
+  //   ]).axios.spread((characters, death, quotes) => {
+  //     console.log(characters, death, quotes)
+  //     this.setState({
+  //       breakBadChar: characters,
+  //       breakBadQuote: quotes,
+  //       breakBadDeath: death
+  //     })
+  //   })
+  // };
 
 
   getCharacters = () => {
@@ -79,11 +79,11 @@ class App extends Component {
           <section>
             <h3 className="hover">If you've seen them, call DEA</h3>
             <h3 className="hover">*hover & click for info/sounds*</h3>
-            <span className="wrapper flex space">
+            <div className="wrapper flex space">
             { this.state.breakBadArray.map( ( bad, index ) => {
               return (
                 <div className="actorSound" key={index} onClick={() => this.BadSounds(audioClips[bad.name].sound)}>
-                  <li className="characterBox" key={ index } onClick={ this.playAudio }>
+                  <li className="characterBox" key={ index }>
                     <div>
                       <img src={ bad.img } alt={ bad.name }/>
                     </div>
@@ -97,15 +97,12 @@ class App extends Component {
                         <p>Health Statue: { bad.status }</p> 
                         <p>Appearances: { bad.category }</p>
                       </div>
-                      {/* <div className="actorSounds" key={index} onClick={() => this.BadSounds(audioClips[bad.name].sound)}>
-                        Click to hear {audioClips[bad.name].label}
-                      </div> */}
                     </div>
                   </li>
                 </div>
               );
             })}
-            </span>
+            </div>
           </section>
           <Aside />
         </main>
