@@ -7,9 +7,10 @@ a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,c
 .visuallyHidden:not(:focus):not(:active) { position: absolute; width: 1px; height: 1px; margin: -1px;border: 0;padding: 0;white-space: nowrap;clip-path: inset(100%);clip: rect(00 0 0);overflow: hidden;}
 
 @import url('https://fonts.googleapis.com/css?family=Oswald:400,500,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bahianita|Exo+2:400,700|Permanent+Marker|Shadows+Into+Light&display=swap');
 
 body {
-  background-image: linear-gradient(#093009, #1F6032, #29773E, #369457, #032202);
+  background-image: linear-gradient(#062206, rgb(26, 80, 42), #29773E, #31864f, #032202);
   font-size: 62.5%;
 }
 
@@ -41,15 +42,20 @@ header {
 
 .headerTitle {
   text-shadow: 1px 1px 10px #fff;
-  text-decoration: underline;
+  /* text-decoration: underline; */
   text-transform: uppercase;
   margin: 5rem 0 1rem 0;
-  font-size: 7rem;
+  font-size: 8rem;
   margin: 0 auto;
   width: 75%;
   position: absolute;
   top: 30%;
-  left: 9%;
+  left: 12%;
+  font-weight: 700;
+  /* font-family: 'Exo 2', sans-serif; */
+  font-family: 'Shadows Into Light', cursive;
+  /* font-family: 'Bahianita', cursive; */
+  /* font-family: 'Permanent Marker', cursive;  */
 }
 
 .headerD {
@@ -65,11 +71,12 @@ header {
 }
 
 .headerButton {
-  border: 2px solid gray;
+  border: 5px solid gray;
+  box-shadow: 3px 3px 10px #000;
   font-family: 'Oswald', sans-serif;
   letter-spacing: 1.5px;
   font-size: 1.5rem;
-  padding: 1rem;
+  padding: 0.9rem 1.3rem;
   position:absolute;
   bottom: 10%;
   left: 45%;
@@ -78,9 +85,10 @@ header {
 }
 
 .headerButton:hover {
-  border: 2px solid rgb(82, 81, 81);
+  border: 5px solid rgb(158, 156, 156);
   background-color: gray;
   transition: all 0.5s;
+  box-shadow: none;
 }
 
 
@@ -100,9 +108,10 @@ main {
   margin: 3rem 0 3rem 0 ;
   font-size: 4rem;
 }
+
 .hover {
   text-shadow: 1px 1px 10px #000;
-  /* background-color: rgb(34, 33, 33); */
+  font-family: 'Shadows Into Light', cursive;
   color:rgb(187, 163, 30);
   width: 40%;
   font-size: 2rem;
@@ -136,7 +145,6 @@ main {
 .actorSound {
   background-image: url(./assets/danger.jpg);
   background-position: 50% 110%;
-  border: 2px solid #000;
   background-size: contain;
   margin-bottom: 1rem;
   text-align: center;
@@ -233,11 +241,29 @@ img {
   left: 47%;
 }
 
+.nav {
+  margin-top: 6rem;
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  justify-content: space-between;
+}
+
+.nav ul a {
+    text-decoration: none;
+    color: white;
+}
+
+.nav ul a:hover {
+  color: gray;
+}
+
 .credits {
   font-size: 1rem;
   width: 60%;
   margin: 0 auto;
-  margin-top: 6rem;
+  margin-top: 5rem;
   color: #fff;
   font-weight: 400;
 }
