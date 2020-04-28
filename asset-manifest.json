@@ -1,0 +1,41 @@
+{
+  "files": {
+    "main.css": "/miguel-cabrera-project-5/static/css/main.b18e0dfb.chunk.css",
+    "main.js": "/miguel-cabrera-project-5/static/js/main.9fdd4212.chunk.js",
+    "main.js.map": "/miguel-cabrera-project-5/static/js/main.9fdd4212.chunk.js.map",
+    "runtime-main.js": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js",
+    "runtime-main.js.map": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js.map",
+    "static/js/2.cd3acf9a.chunk.js": "/miguel-cabrera-project-5/static/js/2.cd3acf9a.chunk.js",
+    "static/js/2.cd3acf9a.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.cd3acf9a.chunk.js.map",
+    "index.html": "/miguel-cabrera-project-5/index.html",
+    "precache-manifest.78480aee9801699f6575dbac0d2f3008.js": "/miguel-cabrera-project-5/precache-manifest.78480aee9801699f6575dbac0d2f3008.js",
+    "service-worker.js": "/miguel-cabrera-project-5/service-worker.js",
+    "static/css/main.b18e0dfb.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.b18e0dfb.chunk.css.map",
+    "static/js/2.cd3acf9a.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.cd3acf9a.chunk.js.LICENSE.txt",
+    "static/media/Hank.mp3": "/miguel-cabrera-project-5/static/media/Hank.248448bd.mp3",
+    "static/media/breakingBad1.png": "/miguel-cabrera-project-5/static/media/breakingBad1.3795f66d.png",
+    "static/media/App.css": "/miguel-cabrera-project-5/static/media/danger.908982d1.jpg",
+    "static/media/domingoMolina.mp3": "/miguel-cabrera-project-5/static/media/domingoMolina.845da505.mp3",
+    "static/media/gusFring.mp3": "/miguel-cabrera-project-5/static/media/gusFring.18f891db.mp3",
+    "static/media/hectorSalamanca.mp3": "/miguel-cabrera-project-5/static/media/hectorSalamanca.1d3bc980.mp3",
+    "static/media/introSong.mp3": "/miguel-cabrera-project-5/static/media/introSong.bace2a06.mp3",
+    "static/media/janeMargolis1.mp3": "/miguel-cabrera-project-5/static/media/janeMargolis1.7cdac254.mp3",
+    "static/media/jessePinkman2.mp3": "/miguel-cabrera-project-5/static/media/jessePinkman2.f96aef0d.mp3",
+    "static/media/lydiaRodarte.mp3": "/miguel-cabrera-project-5/static/media/lydiaRodarte.c5490766.mp3",
+    "static/media/marieSchrader.mp3": "/miguel-cabrera-project-5/static/media/marieSchrader.be05e69c.mp3",
+    "static/media/mikeEhrmantraut2.mp3": "/miguel-cabrera-project-5/static/media/mikeEhrmantraut2.58184e35.mp3",
+    "static/media/salamanca.mp3": "/miguel-cabrera-project-5/static/media/salamanca.be14a396.mp3",
+    "static/media/saulGoodman.mp3": "/miguel-cabrera-project-5/static/media/saulGoodman.27c2ef54.mp3",
+    "static/media/skylarWhite2.mp3": "/miguel-cabrera-project-5/static/media/skylarWhite2.d4426974.mp3",
+    "static/media/toddAlquist.mp3": "/miguel-cabrera-project-5/static/media/toddAlquist.637eda2e.mp3",
+    "static/media/tucoSalamanca.mp3": "/miguel-cabrera-project-5/static/media/tucoSalamanca.b89d8fb7.mp3",
+    "static/media/walterJr.mp3": "/miguel-cabrera-project-5/static/media/walterJr.b8a617ad.mp3",
+    "static/media/walterWhite1.mp3": "/miguel-cabrera-project-5/static/media/walterWhite1.3540cc39.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.09b83635.js",
+    "static/js/2.cd3acf9a.chunk.js",
+    "static/css/main.b18e0dfb.chunk.css",
+    "static/js/main.9fdd4212.chunk.js"
+  ]
+}
