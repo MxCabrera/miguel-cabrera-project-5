@@ -21,7 +21,7 @@ import salamanca from './assets/salamanca.mp3';
 const audioClips = {
    'Walter White': { sound: walter, label: 'Walter', quote: '.. I am the Danger', link: 'https://en.wikipedia.org/wiki/Bryan_Cranston'},
    'Jesse Pinkman': { sound: jesse, label: 'Jesse', quote: 'Yo, yo, yo', link: 'https://en.wikipedia.org/wiki/Aaron_Paul'},
-   'Skyler White': { sound: skylar, label: 'Skyler', quote: '.. This is veggie bacon', link: 'https://en.wikipedia.org/wiki/Anna_Gunn'},
+   'Skyler White': { sound: skylar, label: 'Skyler', quote: '.. That is veggie bacon', link: 'https://en.wikipedia.org/wiki/Anna_Gunn'},
    'Walter White Jr.': { sound: walterJr, label: 'Walter Jr.', quote: '.. Can you buy us a 6-pack?', link: 'https://en.wikipedia.org/wiki/RJ_Mitte'},
    'Henry Schrader': { sound: hank, label: 'Henry', quote: '.. It makes me want to cry', link: 'https://en.wikipedia.org/wiki/Dean_Norris'},
    'Marie Schrader': { sound: marie, label: 'Marie', quote: '..I should be changing bed pans', link: 'https://en.wikipedia.org/wiki/Betsy_Brandt'},
@@ -30,9 +30,9 @@ const audioClips = {
    'Gustavo Fring': { sound: gusFring, label: 'Gustavo', quote: '.. A man provides, Walter', link: 'https://en.wikipedia.org/wiki/Giancarlo_Esposito'},
    'Hector Salamanca': { sound: hectorS, label: 'Hector', quote: '*Ding Ding*', link: 'https://en.wikipedia.org/wiki/Mark_Margolis'},
    'Domingo Molina': { sound: domingo, label: 'Domingo', quote: 'I know your little punk ass..', link: 'https://en.wikipedia.org/wiki/Maximino_Arciniega'},
-   'Tuco Salamanca': { sound: tucoS, label: 'Tuco', quote: 'Woo! Booyah!', link: 'https://en.wikipedia.org/wiki/Raymond_Cruz'},
+   'Tuco Salamanca': { sound: tucoS, label: 'Tuco', quote: 'Booyah! Woo!', link: 'https://en.wikipedia.org/wiki/Raymond_Cruz'},
    'Marco & Leonel Salamanca': { sound: salamanca, label: 'Marco & Leonel', quote: '*pew pew*', link: 'https://en.wikipedia.org/wiki/Luis_Moncada'},
-   'Lydia Rodarte-Quayle': { sound: lydiaR, label: 'Lydia', quote: '.. Im talking a whole ocean', link: 'https://en.wikipedia.org/wiki/Laura_Fraser'},
+   'Lydia Rodarte-Quayle': { sound: lydiaR, label: 'Lydia', quote: '.. Im talking about an ocean', link: 'https://en.wikipedia.org/wiki/Laura_Fraser'},
    'Todd Alquist': { sound: todd, label: 'Todd', quote: '.. But this is millions', link: 'https://en.wikipedia.org/wiki/Jesse_Plemons'},
    'Jane Margolis': { sound: jane, label: 'Jane', quote: 'Pen and paper', link: 'https://en.wikipedia.org/wiki/Krysten_Ritter'}
 }

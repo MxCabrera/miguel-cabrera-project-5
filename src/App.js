@@ -78,7 +78,7 @@ class App extends Component {
           <h2 className="intro">Albuquerques Most Wanted List</h2>
           <section>
             <h3 className="hover">If you've seen them, call DEA</h3>
-            <h3 className="hover">*hover & click for info/sounds*</h3>
+            <h3 className="hover">*click to hear your favourite character*</h3>
             <div className="wrapper flex space">
             { this.state.breakBadArray.map( ( bad, index ) => {
               return (
@@ -96,12 +96,11 @@ class App extends Component {
                         <p><span className="infoStats">Occupation:</span> { bad.occupation } </p>
                         <p><span className="infoStats">Health Statue:</span> { bad.status }</p> 
                         <p><span className="infoStats">Appearances:</span> { bad.category }</p>
-                        <p><span className="infoStats">Quote:</span>"{audioClips[bad.name].quote}"</p>
+                        <p><span className="infoStats">Quote:</span>  "{audioClips[bad.name].quote}"</p>
                       </div>
                     </div>
                     <span className="pin">O</span>
                   </li>
-
                 </div>
               );
             })}

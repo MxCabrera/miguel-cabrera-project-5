@@ -38,15 +38,6 @@ class Header extends Component {
                         }
                     }
                 }}/>
-                    {/* <div class="nav">
-                        <nav>
-                            <ul class="flex">
-                                <li><a href="">Breaking Bad API</a></li>
-                                <li><a href="">My Portfolio</a></li>
-                                <li><a href="">Official Website</a></li>
-                            </ul>
-                        </nav>
-                    </div> */}
                     <div className="wrapper">
                         <h1 className="headerTitle">Breaking down the Bad</h1>
                         {/* <img src={Logo} alt="Breaking Bad Logo"/> */}
