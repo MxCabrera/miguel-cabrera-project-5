@@ -60,7 +60,6 @@ class App extends Component {
         limit: 16
       }
     }).then(( results ) => {
-      // console.log(results.data)
       this.setState({
         breakBadArray: results.data
       });
