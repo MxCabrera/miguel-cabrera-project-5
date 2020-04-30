@@ -4,9 +4,9 @@ import './App.css';
 function Aside() {
    return (
       <aside className="wrapper">
-         <div class="nav">
+         <div className="nav">
             <nav>
-                  <ul class="flex">
+                  <ul className="flex">
                      <li><a href="https://breakingbadapi.com/documentation">Breaking Bad API</a></li>
                      <li><a href="http://www.mcabrera.ca">My Portfolio</a></li>
                   <li><a href="https://breakingbad.fandom.com/wiki/Breaking_Bad_Wiki">Official Website</a></li>

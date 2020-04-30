@@ -34,7 +34,7 @@ class Header extends Component {
                                 "enable": true,
                                 "mode": "push"
                             },
-                            resize: true
+                            resize: true,
                         }
                     }
                 }}/>

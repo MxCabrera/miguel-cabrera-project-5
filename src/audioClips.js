@@ -1,6 +1,7 @@
 // audio imports 
 import walter from './assets/walterWhite1.mp3';
 import jesse from './assets/jessePinkman2.mp3';
+import jesse2 from './assets/jessePinkman3.mp3';
 import hank from './assets/Hank.mp3';
 import gusFring from './assets/gusFring.mp3';
 import skylar from './assets/skylarWhite2.mp3';
@@ -20,7 +21,7 @@ import salamanca from './assets/salamanca.mp3';
 
 const audioClips = {
    'Walter White': { sound: walter, label: 'Walter', quote: '.. I am the Danger', link: 'https://en.wikipedia.org/wiki/Bryan_Cranston'},
-   'Jesse Pinkman': { sound: jesse, label: 'Jesse', quote: 'Yo, yo, yo', link: 'https://en.wikipedia.org/wiki/Aaron_Paul'},
+   'Jesse Pinkman': { sound: [jesse2, jesse], label: 'Jesse', quote: 'Yo, yo, yo', link: 'https://en.wikipedia.org/wiki/Aaron_Paul'},
    'Skyler White': { sound: skylar, label: 'Skyler', quote: '.. That is veggie bacon', link: 'https://en.wikipedia.org/wiki/Anna_Gunn'},
    'Walter White Jr.': { sound: walterJr, label: 'Walter Jr.', quote: '.. Can you buy us a 6-pack?', link: 'https://en.wikipedia.org/wiki/RJ_Mitte'},
    'Henry Schrader': { sound: hank, label: 'Henry', quote: '.. It makes me want to cry', link: 'https://en.wikipedia.org/wiki/Dean_Norris'},
@@ -38,3 +39,7 @@ const audioClips = {
 }
 
 export default audioClips;
+
+// for (let i=0; i < audioClips.length; i++) {
+   // let show = audioClips[i].sound[Math.floor(Math.random() * audioClip[i]sound.length)]
+// }
