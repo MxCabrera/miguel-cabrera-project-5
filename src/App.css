@@ -302,7 +302,7 @@ img {
 
 .quoteBox h2 {
   font-size: 1.5rem;
-  border: 3px solid black;
+  border: 2px solid black;
   padding: 1rem;
 }
 
@@ -310,9 +310,34 @@ img {
   display: flex;
   justify-content: space-evenly;
   margin: 1rem 0;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
 }
 
+.quoteAnswers {
+  margin: 2rem auto;
+  background-color: yellow;
+  padding: 1rem;
+  font-weight: 700;
+  width: 60%;
+  font-size: 1.2rem;
+}
+
+
+.BBDiv {
+  width: 30%;
+  padding: 1rem;
+  background-color: rgb(221, 221, 71);
+  margin: 0.5rem;
+  box-shadow: 2px 2px 10px #000;
+}
+
+.BscDiv {
+  width: 40%;
+  padding: 5rem 1rem;
+  margin: 0.5rem;
+  background-color: gray;
+  border-radius: 3%;
+}
 
 
 /* my styles end here  */

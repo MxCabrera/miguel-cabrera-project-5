@@ -6,7 +6,8 @@ import Footer from './Footer';
 import Aside from './Aside'
 import './Setup.css';
 import axios from 'axios';
-import audioClips from './audioClips'
+import audioClips from './audioClips';
+import Poll from './Poll'
 
 class App extends Component {
 
@@ -23,12 +24,12 @@ class App extends Component {
       isBadThere: true,
       endpoint1: true,
       endpoint2: false,
-      endpoint3: false
+      endpoint3: false,
     };
   };
 
   componentDidMount() {
-    this.getApiData()
+    this.getApiData();
   }
 
   getApiData = () => {
@@ -144,11 +145,11 @@ class App extends Component {
                         <>
                         <h2>{singleQuote.quote}</h2>
                         <div className="quizChoices">
-                          <label><input type="radio"/>Saul Goodman</label>
-                          <label><input type="radio" />Jesse Pinkman</label>
-                          <label><input type="radio" />Walter White</label>
+                          <label><input type="radio"/> Saul Goodman</label>
+                          <label><input type="radio" /> Jesse Pinkman</label>
+                          <label><input type="radio" /> Walter White</label>
                         </div>
-                        <h3 className={ this.state.isAnswerShowing ? "" : 'displayNone'}>Answer: {singleQuote.author}</h3>
+                        <h3 className={ this.state.isAnswerShowing ? "quoteAnswers" : 'displayNone'}>Answer: {singleQuote.author}</h3>
                         </>
                       )
                     }
@@ -167,24 +168,28 @@ class App extends Component {
 
             {/* deaths endpoint */}
             <div className={this.state.endpoint2 ? "" : "endpoint2"}>
-            {this.state.deathArray.map((deathStuff) => {
-              const deathResults = deathStuff.data
-              // console.log(deathResults)
-              return (
-                deathResults.map((singleDeath) => {
+              <h2>Death List</h2>
+              <h3>*Warning: SPOILERS*</h3>
+                <div className="flex">
+                {this.state.deathArray.map((deathStuff) => {
+                  const deathResults = deathStuff.data
+                  // console.log(deathResults)
                   return (
-                    <>
-                      <h1>Who Died: {singleDeath.death}</h1>
-                      <h2>Cause of Death: {singleDeath.cause} </h2>
-                      <h2> Responsible: { singleDeath.responsible } </h2>
-                      <h3>Last words: {singleDeath.last_words}</h3>
-                      <h2> Cause of Death: { singleDeath.cause } </h2>
-                      <p>What episode: Season {singleDeath.season}, Episode {singleDeath.episode}</p>
-                    </>
+                    deathResults.map((singleDeath) => {
+                      return (
+                        <div className="BscDiv">
+                          <h1>Deceased: {singleDeath.death}</h1>
+                          <h2>Cause of Death: {singleDeath.cause} </h2>
+                          <h2>Responsible: { singleDeath.responsible } </h2>
+                          <h3>Last words: "{singleDeath.last_words}"</h3>
+                          <h2> Cause of Death: { singleDeath.cause } </h2>
+                          <p>What episode: Season {singleDeath.season}, Episode {singleDeath.episode}</p>
+                        </div>
+                      )
+                    })
                   )
-                })
-              )
-            })}
+                })}
+              </div>
             </div>
 
 
@@ -195,8 +200,8 @@ class App extends Component {
             <div>
             <button onClick={()=> this.setState({isBadThere : !this.state.isBadThere, isSaulThere: false})}>Breaking Bad</button>
             <button onClick={() => this.setState({ isSaulThere: !this.state.isSaulThere, isBadThere: false })}>Better Call Saul</button>
-
             </div>
+            <div className="flex">
             {this.state.epArray.map((tvStuff)=>{
               let tvResults = tvStuff.data
               return(
@@ -204,11 +209,11 @@ class App extends Component {
                   if (singleEp.series === 'Breaking Bad'){
                     return(
                       <>
-                        <div className={this.state.isBadThere ? "" : 'breakingBadDiv'}>
-                          <h1>Season: {singleEp.season}</h1>
-                          <h2>Episode #{singleEp.episode}</h2>
+                        <div className={this.state.isBadThere ? "BBDiv" : 'breakingBadDiv'}>
+                          <h1>Season: {singleEp.season}, Episode #{singleEp.episode}</h1>
+                          <h2></h2>
                           <h2>Title: {singleEp.title}</h2>
-                          <h2>{singleEp.air_date}</h2>
+                          <h2>Release Date: {singleEp.air_date}</h2>
                           <p>Characters Involved: {singleEp.characters}</p>
                         </div>
                       </>
@@ -216,7 +221,7 @@ class App extends Component {
                   } else if (singleEp.series === 'Better Call Saul') {
                     return(
                       <>
-                        <div className={this.state.isSaulThere ? "" : "betterCallSaulDiv"}>
+                        <div className={this.state.isSaulThere ? "BBDiv" : "betterCallSaulDiv"}>
                           <h1>Season: {singleEp.season}</h1>
                           <h2>Episode #{singleEp.episode}</h2>
                           <h2>Title: {singleEp.title}</h2>
@@ -229,8 +234,10 @@ class App extends Component {
                 })
               )
             })}
+                </div>
             </div>
           </div>
+          <Poll/>
         </section>
         <Aside />
       </main>
