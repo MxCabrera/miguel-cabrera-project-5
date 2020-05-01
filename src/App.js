@@ -25,8 +25,7 @@ class App extends Component {
       endpoint1: true,
       endpoint2: false,
       endpoint3: false,
-      previousButton: '',
-      nextButton: '',
+      soundStorage: undefined
     };
   };
 
@@ -56,7 +55,6 @@ class App extends Component {
         quoteArray: [infoTwo],
         deathArray: [infoThree],
         epArray: [infoFour]
-
       })
     })).catch(errors => {
       console.log(errors, 'it didnt work!')
@@ -69,14 +67,19 @@ class App extends Component {
     this.BadSounds(random)
   }
 
-
   // creating a new Howl that will accept the audioClip array waiting for user click.
   BadSounds = (src) => {
+    if (this.state.soundStorage) {
+      this.state.soundStorage.stop()
+    }
     const sound = new Howl({
       src
     });
-    // console.log(sound)
+    console.log(sound)
     // if previous sound is already playing, pause it. if not, play new click.
+    this.setState({
+      soundStorage: sound
+    })
     sound.play()
   };
 

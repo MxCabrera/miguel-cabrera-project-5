@@ -64,16 +64,17 @@ header {
 }
 
 .headerButton {
-  border: 5px solid gray;
   box-shadow: 3px 3px 10px #000;
   font-family: 'Oswald', sans-serif;
-  letter-spacing: 1.5px;
-  font-size: 1.5rem;
+  text-transform: uppercase;
+  background-color: white;
+  border: 5px solid gray;
   padding: 0.9rem 1.3rem;
+  letter-spacing: 1.5px;
   position:absolute;
+  font-size: 1.5rem;
   bottom: 10%;
   left: 45%;
-  text-transform: uppercase;
 }
 
 .headerButton:hover {
@@ -114,6 +115,7 @@ main {
 .topicButtons {
   border: 5px solid gray;
   padding: 0.7rem 1rem;
+  background-color: white;
   font-family: 'Oswald', sans-serif;
   margin: 3rem 0.5rem 1rem 0.5rem;
   font-size: 1.3rem;

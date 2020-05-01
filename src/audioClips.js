@@ -59,7 +59,7 @@ const audioClips = {
    link: 'https://en.wikipedia.org/wiki/Aaron_Paul'
 },
    'Skyler White': { 
-      sound: [skyler, skyler2],
+   sound: [skyler, skyler2],
    label: 'Skyler', 
    quote: '.. That is veggie bacon', 
    link: 'https://en.wikipedia.org/wiki/Anna_Gunn'
@@ -137,7 +137,7 @@ const audioClips = {
    link: 'https://en.wikipedia.org/wiki/Jesse_Plemons'
 },
    'Jane Margolis': { 
-   sound: [jane, jane], 
+   sound: [jane, jane2], 
    label: 'Jane', 
    quote: 'Pen and paper', 
    link: 'https://en.wikipedia.org/wiki/Krysten_Ritter'
