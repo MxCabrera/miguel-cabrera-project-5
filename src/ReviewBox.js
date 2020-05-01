@@ -3,12 +3,13 @@ import './App.css';
 import firebase from './firebase';
 import Review from './Review'
 
-class Poll extends Component {
+class ReviewBox extends Component {
    constructor(){
       super()
       this.state = {
          review: [],
          userInput: '',
+         userNumber: 0
       }
    }
    componentDidMount() {
@@ -40,7 +41,8 @@ class Poll extends Component {
          const dbRef = firebase.database().ref()
          dbRef.push(this.state.userInput)
          this.setState({
-            userInput: ''
+            userInput: '',
+            userNumber: this.state.userNumber + 1
          })
       }
    }
@@ -57,25 +59,33 @@ class Poll extends Component {
 
    render() {
       return (
-         <div>
-            <h1>Write Your Reviews</h1>
-            {/* take the input from the user and add to this.state.review */}
-            <form action="" onSubmit={this.handleSubmit}>
-               <input type="text" id='userBad' value={this.state.userInput} onChange={this.handleUserInput} />
-               <button type="submit">Add Review</button>
-            </form>
-            <ul>
-               {/* your calling this state to access the bad array which is mapped out and put into a review parameter, we call the Review/> and add an attribute badtitle which is used inthe review/> component */}
-               {this.state.review.map((singleReview) => {
-                  // console.log(singleReview.badId)
-                  return (
-                     <Review badId={singleReview.badId} badTitle={singleReview.badName} />
-                  )
-               })}
-            </ul>
+         <div className="wrapper">
+            <div className="reviewBox">
+               <h1 className="reviewTitle">Write Your Bad Reviews</h1>
+               <ul className="reviewComp">
+                  {/* your calling this state to access the bad array which is mapped out and put into a review parameter, we call the Review/> and add an attribute badtitle which is used inthe review/> component */}
+                  {this.state.review.map((singleReview) => {
+                     // console.log(singleReview.badId)
+                     return (
+                        <Review badId={singleReview.badId} badTitle={singleReview.badName} />
+                     )
+                  })}
+               </ul>
+               {/* take the input from the user and add to this.state.review */}
+               <form className="form" action="" onSubmit={this.handleSubmit}>
+                  <input 
+                  type="text" 
+                  className="reviewInput" 
+                  value={this.state.userInput} 
+                  onChange={this.handleUserInput} 
+                  placeholder="Tell us what you love about Breaking Bad or if you enjoyed this app!"
+                  />
+                  <button className="reviewSubmit" type="submit">Add Review</button>
+               </form>
+            </div>
          </div>
       )
    }
 }
 
-export default Poll;
+export default ReviewBox;

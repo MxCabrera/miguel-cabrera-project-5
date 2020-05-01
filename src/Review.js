@@ -1,18 +1,24 @@
 import React from 'react';
 import './App.css';
 import firebase from './firebase'
+import ReviewBox from './ReviewBox'
+// import Moment from 'moment'
 
 function Review(props) {
-
-
-   const deleteItem = () => {
+   // const moment = require('moment');
+   // const today = moment();
+   // const date = today.format('lll');
+   // let datetime = new Date()
+   // console.log(datetime);
+console.log(ReviewBox)
+   const deleteReview = () => {
       const itemRef = firebase.database().ref(props.badId)
       itemRef.remove()
-      console.log(props.badId)
+      // console.log(props.badId)
    }
 
    return (
-      <li onClick={deleteItem}>{props.badTitle}</li>
+   <li className="singleReview" onClick={deleteReview}><span>Anonymous User:</span><span>"{props.badTitle}"</span></li>
    )
 }
 

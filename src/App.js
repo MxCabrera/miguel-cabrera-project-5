@@ -7,7 +7,7 @@ import Aside from './Aside'
 import './Setup.css';
 import axios from 'axios';
 import audioClips from './audioClips';
-import Poll from './Poll'
+import ReviewBox from './ReviewBox'
 
 class App extends Component {
 
@@ -25,6 +25,8 @@ class App extends Component {
       endpoint1: true,
       endpoint2: false,
       endpoint3: false,
+      previousButton: '',
+      nextButton: '',
     };
   };
 
@@ -62,11 +64,9 @@ class App extends Component {
   }
 
   CreateSounds = (src) => {
-    const sound = new Howl({
-      src
-    });
-    this.BadSounds(src)
-    sound.stop()
+    const characterSounds = src;
+    const random = characterSounds[Math.floor(Math.random() * characterSounds.length)];
+    this.BadSounds(random)
   }
 
 
@@ -81,29 +81,42 @@ class App extends Component {
   };
 
 
+  scrollUp = () => {
+    window.scrollTo(0,0)
+  }
+
+
   render(){
     Howler.volume(0.5);
+    console.log(audioClips)
     return (
       <>
       <Header />
       <main>
         <section>
-            <h2 className="intro">Albuquerques Most Wanted List</h2>
+            <h1 className="intro">Albuquerques Most Wanted List</h1>
             <h3 className="hover">If you've seen them, call DEA</h3>
             <h3 className="hover">*click to hear your favourite character*</h3>
             <div>
-              <button onClick={() => this.setState({endpoint3: !this.state.endpoint3, endpoint1: false, endpoint2: false})}>Shows</button>
-              <button onClick={()=> this.setState({endpoint1 : !this.state.endpoint1, endpoint2: false, endpoint3: false})}>Sound Board</button>
-              <button onClick={() => this.setState({endpoint2: !this.state.endpoint2, endpoint1: false, endpoint3: false})}>Deaths</button>
+              <button 
+              className="topicButtons" 
+              onClick={() => this.setState({endpoint3: !this.state.endpoint3, endpoint1: false, endpoint2: false})}
+              >Shows</button>
+              <button 
+              className="topicButtons" 
+              onClick={()=> this.setState({endpoint1 : !this.state.endpoint1, endpoint2: false, endpoint3: false})}
+              >Sound Board</button>
+              <button 
+              className="topicButtons" 
+              onClick={() => this.setState({endpoint2: !this.state.endpoint2, endpoint1: false, endpoint3: false})}
+              >Deaths</button>
             </div>
           <div className="wrapper flex space">
             <span className={this.state.endpoint1 ? "flex" : "endpoint1"}>
             {this.state.charArray.map((allBadInfo, index)=>{
-              // console.log(allBadInfo.data)
               const results = allBadInfo.data
               return(
                 results.map((deeper)=>{
-                  // console.log(deeper)
                   return(
                     <div className="actorSound" key={index} onClick={() => this.CreateSounds(audioClips[deeper.name].sound)}>
                       <li className="characterBox" key={index}>
@@ -115,11 +128,11 @@ class App extends Component {
                           <div className="infoP">
                             <h3><span className="infoStats">Nickname:</span> {deeper.nickname}</h3>
                             <p><span className="infoStats">Birthday:</span> {deeper.birthday}</p>
-                            <p><span className="infoStats">Actor:</span>{deeper.portrayed}</p>
+                            <p><span className="infoStats">Actor:</span><a href={audioClips[deeper.name].link}> {deeper.portrayed}</a> </p>
                             <p><span className="infoStats">Occupation:</span> {deeper.occupation} </p>
                             <p><span className="infoStats">Health Statue:</span> {deeper.status}</p>
                             <p><span className="infoStats">Appearances:</span> {deeper.category}</p>
-                            <p><span className="infoStats">Quote:</span>{deeper.quote}</p>
+                            <p><span className="infoStats">Quote:</span> {audioClips[deeper.name].quote}</p>
                           </div>
                         </div>
                         <span className="pin">O</span>
@@ -133,7 +146,7 @@ class App extends Component {
             {/* Quote Endpoint */}
             <div className="quoteBox">
 
-              <h1 className="quoteTop">Who said it?!</h1>        
+              <h2 className="quoteTop">Guess who said it?!</h2>        
               {this.state.quoteArray.map((quoteStuff)=>{
                 const quoteResults = quoteStuff.data
                 
@@ -142,34 +155,34 @@ class App extends Component {
                   quoteResults.map((singleQuote)=>{
                     if(singleQuote.quote_id <= '9' && singleQuote.quote_id >= '7') {
                       return(
-                        <>
-                        <h2>{singleQuote.quote}</h2>
-                        <div className="quizChoices">
-                          <label><input type="radio"/> Saul Goodman</label>
-                          <label><input type="radio" /> Jesse Pinkman</label>
-                          <label><input type="radio" /> Walter White</label>
+                        <div className="quoteQuestions">
+                        <h2>"{singleQuote.quote}"</h2>
+                        <div className={ this.state.isAnswerShowing ? "displayNone" : "quizChoices"}>
+                          <label for="quotes1"><input type="radio" id="quotez1" name="tinyQuiz1"/> Saul Goodman</label>
+                          <label for="quotes2"><input type="radio" id="quotez2" name="tinyQuiz2" /> Jesse Pinkman</label>
+                          <label for="quotes3"><input type="radio" id="quotez3" name="tinyQuiz3" /> Walter White</label>
                         </div>
-                        <h3 className={ this.state.isAnswerShowing ? "quoteAnswers" : 'displayNone'}>Answer: {singleQuote.author}</h3>
-                        </>
+                        <h3 className={ this.state.isAnswerShowing ? "quoteAnswers" : "displayNone"}>Answer: {singleQuote.author}</h3>
+                        </div>
                       )
                     }
                   })
                   )
                 })}
-                <button onClick={() => {
+                <button 
+                className="quoteButton"
+                onClick={() => {
                   this.setState({
                     isAnswerShowing: !this.state.isAnswerShowing
-                  }
-
-                  )}}>Click here to find out</button>
-            </div>
+                  })}}>Click here to find out</button>
+              </div>
             </span>
 
 
             {/* deaths endpoint */}
             <div className={this.state.endpoint2 ? "" : "endpoint2"}>
-              <h2>Death List</h2>
-              <h3>*Warning: SPOILERS*</h3>
+              <h2 className="deathTitle">Death List</h2>
+              <h3 className="spoilers">*Warning: SPOILERS*</h3>
                 <div className="flex">
                 {this.state.deathArray.map((deathStuff) => {
                   const deathResults = deathStuff.data
@@ -178,12 +191,13 @@ class App extends Component {
                     deathResults.map((singleDeath) => {
                       return (
                         <div className="BscDiv">
-                          <h1>Deceased: {singleDeath.death}</h1>
-                          <h2>Cause of Death: {singleDeath.cause} </h2>
-                          <h2>Responsible: { singleDeath.responsible } </h2>
-                          <h3>Last words: "{singleDeath.last_words}"</h3>
-                          <h2> Cause of Death: { singleDeath.cause } </h2>
-                          <p>What episode: Season {singleDeath.season}, Episode {singleDeath.episode}</p>
+                          <h3 className="deathInfoT">Deceased: </h3>
+                          <h3 className="deathInfoT"> <span className="whoDied">{singleDeath.death}</span></h3>
+                          <p className="deathInfo">Cause of Death: {singleDeath.cause} </p>
+                          <p className="deathInfo">Responsible: { singleDeath.responsible } </p>
+                          <p className="deathInfo">Last words: "{singleDeath.last_words}"</p>
+                          <p className="deathInfo"> Cause of Death: { singleDeath.cause } </p>
+                          <p className="deathInfo">What episode: Season {singleDeath.season}, Episode {singleDeath.episode}</p>
                         </div>
                       )
                     })
@@ -196,10 +210,18 @@ class App extends Component {
             {/* Seasons Endpoint */}
             <div className={this.state.endpoint3 ? "" : "endpoint3"}>
 
-            <h1>Season Breakdown</h1>
+            <h2 className="deathTitle">Season Breakdown</h2>
             <div>
-            <button onClick={()=> this.setState({isBadThere : !this.state.isBadThere, isSaulThere: false})}>Breaking Bad</button>
-            <button onClick={() => this.setState({ isSaulThere: !this.state.isSaulThere, isBadThere: false })}>Better Call Saul</button>
+            <button 
+              className="topicButtons"
+              onClick={()=> this.setState({isBadThere : !this.state.isBadThere, isSaulThere: false})}
+              >Breaking Bad
+            </button>
+            <button 
+              className="topicButtons"
+              onClick={() => this.setState({ isSaulThere: !this.state.isSaulThere, isBadThere: false })}
+              >Better Call Saul
+            </button>
             </div>
             <div className="flex">
             {this.state.epArray.map((tvStuff)=>{
@@ -210,23 +232,23 @@ class App extends Component {
                     return(
                       <>
                         <div className={this.state.isBadThere ? "BBDiv" : 'breakingBadDiv'}>
-                          <h1>Season: {singleEp.season}, Episode #{singleEp.episode}</h1>
-                          <h2></h2>
-                          <h2>Title: {singleEp.title}</h2>
-                          <h2>Release Date: {singleEp.air_date}</h2>
-                          <p>Characters Involved: {singleEp.characters}</p>
+                          <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                          <p>Title: {singleEp.title}</p>
+                          <p>Release Date: {singleEp.air_date}</p>
+                          <p> Characters Involved:</p>
+                          <p>{singleEp.characters}</p>
                         </div>
                       </>
                     )
                   } else if (singleEp.series === 'Better Call Saul') {
                     return(
                       <>
-                        <div className={this.state.isSaulThere ? "BBDiv" : "betterCallSaulDiv"}>
-                          <h1>Season: {singleEp.season}</h1>
-                          <h2>Episode #{singleEp.episode}</h2>
-                          <h2>Title: {singleEp.title}</h2>
-                          <h2>{singleEp.air_date}</h2>
-                          <p>Characters Involved: {singleEp.characters}</p>
+                        <div className={this.state.isSaulThere ? "BBDiv2" : "betterCallSaulDiv"}>
+                          <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                          <p>Title: {singleEp.title}</p>
+                          <p>Release Date: {singleEp.air_date}</p>
+                          <p> Characters Involved:</p>
+                          <p>{singleEp.characters}</p>
                         </div>
                       </>
                     )
@@ -236,8 +258,9 @@ class App extends Component {
             })}
                 </div>
             </div>
+            <h2 className="scrollUp" onClick={this.scrollUp}>Click to go back to the top</h2>
           </div>
-          <Poll/>
+          <ReviewBox />
         </section>
         <Aside />
       </main>

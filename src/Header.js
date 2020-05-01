@@ -18,10 +18,10 @@ class Header extends Component {
                 <Particles className="transparency" params={{
                     "particles": {
                         "number": {
-                            "value": 100
+                            "value": 60
                         },
                         "size": {
-                            "value": 4
+                            "value": 8
                         }
                     },
                     "interactivity": {
