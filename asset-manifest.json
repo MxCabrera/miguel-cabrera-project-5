@@ -1,24 +1,23 @@
 {
   "files": {
-    "main.css": "/miguel-cabrera-project-5/static/css/main.ab81bf95.chunk.css",
-    "main.js": "/miguel-cabrera-project-5/static/js/main.fea58123.chunk.js",
-    "main.js.map": "/miguel-cabrera-project-5/static/js/main.fea58123.chunk.js.map",
+    "main.css": "/miguel-cabrera-project-5/static/css/main.1d7548b4.chunk.css",
+    "main.js": "/miguel-cabrera-project-5/static/js/main.789f830e.chunk.js",
+    "main.js.map": "/miguel-cabrera-project-5/static/js/main.789f830e.chunk.js.map",
     "runtime-main.js": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js",
     "runtime-main.js.map": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js.map",
-    "static/js/2.d77a36ea.chunk.js": "/miguel-cabrera-project-5/static/js/2.d77a36ea.chunk.js",
-    "static/js/2.d77a36ea.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.d77a36ea.chunk.js.map",
+    "static/js/2.dfae252c.chunk.js": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js",
+    "static/js/2.dfae252c.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js.map",
     "index.html": "/miguel-cabrera-project-5/index.html",
-    "precache-manifest.c94685d91fa8ca5fa8b10e5f824e9445.js": "/miguel-cabrera-project-5/precache-manifest.c94685d91fa8ca5fa8b10e5f824e9445.js",
+    "precache-manifest.97b5c102984ee53dc44f3447ba76350f.js": "/miguel-cabrera-project-5/precache-manifest.97b5c102984ee53dc44f3447ba76350f.js",
     "service-worker.js": "/miguel-cabrera-project-5/service-worker.js",
-    "static/css/main.ab81bf95.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.ab81bf95.chunk.css.map",
-    "static/js/2.d77a36ea.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.d77a36ea.chunk.js.LICENSE.txt",
+    "static/css/main.1d7548b4.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.1d7548b4.chunk.css.map",
+    "static/js/2.dfae252c.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js.LICENSE.txt",
     "static/media/Hank.mp3": "/miguel-cabrera-project-5/static/media/Hank.248448bd.mp3",
     "static/media/breakingBad1.png": "/miguel-cabrera-project-5/static/media/breakingBad1.3795f66d.png",
     "static/media/App.css": "/miguel-cabrera-project-5/static/media/danger.908982d1.jpg",
     "static/media/domingo2.mp3": "/miguel-cabrera-project-5/static/media/domingo2.6aae599a.mp3",
     "static/media/domingo3.mp3": "/miguel-cabrera-project-5/static/media/domingo3.3724f6f8.mp3",
     "static/media/domingoMolina.mp3": "/miguel-cabrera-project-5/static/media/domingoMolina.845da505.mp3",
-    "static/media/gunshot.mp3": "/miguel-cabrera-project-5/static/media/gunshot.16ed6f24.mp3",
     "static/media/gus2.mp3": "/miguel-cabrera-project-5/static/media/gus2.a9e458e8.mp3",
     "static/media/gus3.mp3": "/miguel-cabrera-project-5/static/media/gus3.5809a02f.mp3",
     "static/media/gus4.mp3": "/miguel-cabrera-project-5/static/media/gus4.16e3d83e.mp3",
@@ -64,8 +63,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.09b83635.js",
-    "static/js/2.d77a36ea.chunk.js",
-    "static/css/main.ab81bf95.chunk.css",
-    "static/js/main.fea58123.chunk.js"
+    "static/js/2.dfae252c.chunk.js",
+    "static/css/main.1d7548b4.chunk.css",
+    "static/js/main.789f830e.chunk.js"
   ]
 }
