@@ -10,9 +10,10 @@ import audioClips from './audioClips';
 import ReviewBox from './ReviewBox'
 
 class App extends Component {
-
+  // the birthing of the lifecycle, creation of state
   constructor() {
     super();
+    // state containing necessary property for app to work
     this.state = {
       breakBadArray: [],
       charArray: [],
@@ -29,26 +30,31 @@ class App extends Component {
     };
   };
 
+  // calling getApiData immediately when the component mounts on DOM.
   componentDidMount() {
     this.getApiData();
   }
 
+  // function that uses axios to grab information from selected API
   getApiData = () => {
+    // storing the API url endpoints into seperate variables
     let characters =`https://www.breakingbadapi.com/api/characters?limit=16`
     let quotes = `https://www.breakingbadapi.com/api/quotes/`
     let death = `https://www.breakingbadapi.com/api/deaths/`
     let episodes = `https://www.breakingbadapi.com/api/episodes/`
+    // using axios.get with each url variable and storing it
     const requestOne = axios.get(characters);
     const requestTwo = axios.get(quotes);
     const requestThree = axios.get(death);
     const requestFour = axios.get(episodes)
-
+    // using axios.all to grab all requests in an array, and then spreading it into individual objects.
     axios.all([requestOne, requestTwo, requestThree, requestFour]).then(axios.spread((...responses) => {
+      // taking the spread array, and storing the individual items into variable
       const infoOne = responses[0];
       const infoTwo = responses[1];
       const infoThree = responses[2];
       const infoFour = responses[3];
-      // console.log(infoOne, infoTwo, infoThree, infoFour, responses)
+      // setting the state, pushing each variable into a property, enclose in an array.
       this.setState({
         breakBadArray: responses,
         charArray: [infoOne],
@@ -57,33 +63,42 @@ class App extends Component {
         epArray: [infoFour]
       })
     })).catch(errors => {
+      // check to see if the axios call failed
       console.log(errors, 'it didnt work!')
     })
   }
 
+
+  // function that takes info passed on from onClick and randomly chooses file from array of audio files.
   CreateSounds = (src) => {
+    // storing parameter into variable
     const characterSounds = src;
+    // grabbing random mp3 file from array and storing it.
     const random = characterSounds[Math.floor(Math.random() * characterSounds.length)];
+    // calling function with randomly chosen mp3 file.
     this.BadSounds(random)
   }
 
-  // creating a new Howl that will accept the audioClip array waiting for user click.
+  // function that takes the audio file randomly chosen, store it in state, and play it.
   BadSounds = (src) => {
+    // if this.state.soundStorage is true, undefined is equal to false, so if theres a sound already in there, stop it. If theres something inside sound storage (in this case its the clicked sound), it is no longer undefined(false) its true, and since its asking if this.state.soundStorage is true then it will stop it.
     if (this.state.soundStorage) {
       this.state.soundStorage.stop()
     }
+    // creating sound variable containing howler.js library that create an object with the parameter passed from the onClick.
     const sound = new Howl({
       src
     });
-    console.log(sound)
-    // if previous sound is already playing, pause it. if not, play new click.
+    // changing state property - pushing sound variable into soundStorage (intially undefined)
     this.setState({
       soundStorage: sound
     })
+    // playing the audio file in DOM.
     sound.play()
   };
 
 
+  // function that when clicked scrolls the users web page to the top of page
   scrollUp = () => {
     window.scrollTo(0,0)
   }
@@ -91,36 +106,49 @@ class App extends Component {
 
   render(){
     Howler.volume(0.5);
-    console.log(audioClips)
     return (
       <>
       <Header />
       <main>
         <section>
-            <h1 className="intro">Albuquerques Most Wanted List</h1>
-            <h3 className="hover">If you've seen them, call DEA</h3>
-            <h3 className="hover">*click to hear your favourite character*</h3>
-            <div>
-              <button 
-              className="topicButtons" 
-              onClick={() => this.setState({endpoint3: !this.state.endpoint3, endpoint1: false, endpoint2: false})}
-              >Shows</button>
-              <button 
-              className="topicButtons" 
-              onClick={()=> this.setState({endpoint1 : !this.state.endpoint1, endpoint2: false, endpoint3: false})}
-              >Sound Board</button>
-              <button 
-              className="topicButtons" 
-              onClick={() => this.setState({endpoint2: !this.state.endpoint2, endpoint1: false, endpoint3: false})}
-              >Deaths</button>
-            </div>
+          {/* main title  */}
+          <h1 className="intro">Albuquerques Most Wanted List</h1>
+          <h3 className="hover">If you've seen them, call DEA</h3>
+          <h3 className="hover">*click to hear your favourite character*</h3>
+          {/* main buttons*/}
+          <div>
+            <button 
+            className="topicButtons" 
+            // changing state values to be opposite of current value
+            // set state of the related property value to false
+            // user will see clicked section only
+            onClick={() => this.setState({endpoint3: !this.state.endpoint3, endpoint1: false, endpoint2: false})}
+            >Shows</button>
+            <button 
+            className="topicButtons" 
+            onClick={()=> this.setState({endpoint1 : !this.state.endpoint1, endpoint2: false, endpoint3: false})}
+            >Sound Board</button>
+            <button 
+            className="topicButtons" 
+            onClick={() => this.setState({endpoint2: !this.state.endpoint2, endpoint1: false, endpoint3: false})}
+            >Deaths</button>
+          </div>
+
+
           <div className="wrapper flex space">
+            {/* sound board section  */}
+            {/* className that contains ternary operator that changes between two classes */}
             <span className={this.state.endpoint1 ? "flex" : "endpoint1"}>
+            {/* mapping charArray from state and display the data*/}
             {this.state.charArray.map((allBadInfo, index)=>{
+              // containing map parameter in variable
               const results = allBadInfo.data
               return(
+                // mapping results variable to get into another level 
                 results.map((deeper)=>{
                   return(
+                    // sound board character cards begin here
+                    // div contains onClick that calls function to start audio functions. This connected my audioClips.js array to the mapped information from the API
                     <div className="actorSound" key={index} onClick={() => this.CreateSounds(audioClips[deeper.name].sound)}>
                       <li className="characterBox" key={index}>
                         <div>
@@ -135,9 +163,10 @@ class App extends Component {
                             <p><span className="infoStats">Occupation:</span> {deeper.occupation} </p>
                             <p><span className="infoStats">Health Statue:</span> {deeper.status}</p>
                             <p><span className="infoStats">Appearances:</span> {deeper.category}</p>
-                            <p><span className="infoStats">Quote:</span> {audioClips[deeper.name].quote}</p>
+                            <p><span className="infoStats">Quote:</span> "{audioClips[deeper.name].quote}"</p>
                           </div>
                         </div>
+                        {/* added "pins" to the DOM for asthetic purposes */}
                         <span className="pin">O</span>
                       </li>
                     </div>
@@ -146,18 +175,22 @@ class App extends Component {
               )
             })}
 
-            {/* Quote Endpoint */}
-            <div className="quoteBox">
 
-              <h2 className="quoteTop">Guess who said it?!</h2>        
+
+            {/* Quote endpoint section */}
+            <div className="quoteBox">
+              <h2 className="quoteTop">Guess who said it?!</h2>    
+              {/* mapping quoteArray from state and displaying data     */}
               {this.state.quoteArray.map((quoteStuff)=>{
+                // storing mapped parameter into variable
                 const quoteResults = quoteStuff.data
-                
                 return(
-                  
+                  // mapping another level further to get access to info
                   quoteResults.map((singleQuote)=>{
+                    // if statement that request the specific quotes to show to DOM
                     if(singleQuote.quote_id <= '9' && singleQuote.quote_id >= '7') {
                       return(
+                        // small quiz section on DOM
                         <div className="quoteQuestions">
                         <h2>"{singleQuote.quote}"</h2>
                         <div className={ this.state.isAnswerShowing ? "displayNone" : "quizChoices"}>
@@ -165,6 +198,7 @@ class App extends Component {
                           <label for="quotes2"><input type="radio" id="quotez2" name="tinyQuiz2" /> Jesse Pinkman</label>
                           <label for="quotes3"><input type="radio" id="quotez3" name="tinyQuiz3" /> Walter White</label>
                         </div>
+                        {/* ternary operator to determine when user want to see the answers revealed (currently display: none)  */}
                         <h3 className={ this.state.isAnswerShowing ? "quoteAnswers" : "displayNone"}>Answer: {singleQuote.author}</h3>
                         </div>
                       )
@@ -172,9 +206,11 @@ class App extends Component {
                   })
                   )
                 })}
+                {/* button when clicked, changes the state so that it is the opposite of original value to display answers */}
                 <button 
                 className="quoteButton"
                 onClick={() => {
+                  // setting state to opposite of current value to reveal answers to DOM when user clicks
                   this.setState({
                     isAnswerShowing: !this.state.isAnswerShowing
                   })}}>Click here to find out</button>
@@ -182,17 +218,21 @@ class App extends Component {
             </span>
 
 
-            {/* deaths endpoint */}
+            {/* deaths endpoint section */}
+            {/* ternary operator to determine if user wants to see this section if not, display none */}
             <div className={this.state.endpoint2 ? "" : "endpoint2"}>
               <h2 className="deathTitle">Death List</h2>
               <h3 className="spoilers">*Warning: SPOILERS*</h3>
                 <div className="flex">
+                {/* map method on deathArray from state and display data */}
                 {this.state.deathArray.map((deathStuff) => {
+                  // storing mapped parameter into variable
                   const deathResults = deathStuff.data
-                  // console.log(deathResults)
                   return (
+                    // mapped variable to get to next level of info
                     deathResults.map((singleDeath) => {
                       return (
+                        // death section displayed on DOM
                         <div className="BscDiv">
                           <h3 className="deathInfoT">Deceased: </h3>
                           <h3 className="deathInfoT"> <span className="whoDied">{singleDeath.death}</span></h3>
@@ -210,57 +250,66 @@ class App extends Component {
             </div>
 
 
-            {/* Seasons Endpoint */}
+            {/* seasons endpoint section */}
+            {/* ternary operator to determine if user want to see this section */}
             <div className={this.state.endpoint3 ? "" : "endpoint3"}>
-
             <h2 className="deathTitle">Season Breakdown</h2>
-            <div>
-            <button 
-              className="topicButtons"
-              onClick={()=> this.setState({isBadThere : !this.state.isBadThere, isSaulThere: false})}
-              >Breaking Bad
-            </button>
-            <button 
-              className="topicButtons"
-              onClick={() => this.setState({ isSaulThere: !this.state.isSaulThere, isBadThere: false })}
-              >Better Call Saul
-            </button>
+              <div>
+                <button 
+                  className="topicButtons"
+                  // on click that changes state property to opposite value which display breaking bad seasons
+                  onClick={()=> this.setState({isBadThere : !this.state.isBadThere, isSaulThere: false})}
+                  >Breaking Bad
+                </button>
+                <button 
+                  className="topicButtons"
+                  // on click that changes state property to opposite value to display better call saul seasons
+                  onClick={() => this.setState({ isSaulThere: !this.state.isSaulThere, isBadThere: false })}
+                  >Better Call Saul
+                </button>
+              </div>
+              <div className="flex">
+                {/* mapped epArray from state to display data */}
+                {this.state.epArray.map((tvStuff)=>{
+                  // storing mapped parameter into variable
+                  let tvResults = tvStuff.data
+                  return(
+                    // mapped variable to get to next level on info
+                    tvResults.map((singleEp)=>{
+                      // if statement to check if the series is breaking bad, return these values.
+                      if (singleEp.series === 'Breaking Bad'){
+                        return(
+                          <>
+                            {/* ternary operator to change between classes if user request it. */}
+                            <div className={this.state.isBadThere ? "BBDiv" : 'breakingBadDiv'}>
+                              <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                              <p>Title: {singleEp.title}</p>
+                              <p>Release Date: {singleEp.air_date}</p>
+                              <p> Characters Involved:</p>
+                              <p>{singleEp.characters}</p>
+                            </div>
+                          </>
+                        )
+                        // if statement to check if the series is better call saul, return these values.
+                      } else if (singleEp.series === 'Better Call Saul') {
+                        return(
+                          <>
+                            <div className={this.state.isSaulThere ? "BBDiv2" : "betterCallSaulDiv"}>
+                              <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                              <p>Title: {singleEp.title}</p>
+                              <p>Release Date: {singleEp.air_date}</p>
+                              <p> Characters Involved:</p>
+                              <p>{singleEp.characters}</p>
+                            </div>
+                          </>
+                        )
+                      }
+                    })
+                  )
+                })}
+              </div>
             </div>
-            <div className="flex">
-            {this.state.epArray.map((tvStuff)=>{
-              let tvResults = tvStuff.data
-              return(
-                tvResults.map((singleEp)=>{
-                  if (singleEp.series === 'Breaking Bad'){
-                    return(
-                      <>
-                        <div className={this.state.isBadThere ? "BBDiv" : 'breakingBadDiv'}>
-                          <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
-                          <p>Title: {singleEp.title}</p>
-                          <p>Release Date: {singleEp.air_date}</p>
-                          <p> Characters Involved:</p>
-                          <p>{singleEp.characters}</p>
-                        </div>
-                      </>
-                    )
-                  } else if (singleEp.series === 'Better Call Saul') {
-                    return(
-                      <>
-                        <div className={this.state.isSaulThere ? "BBDiv2" : "betterCallSaulDiv"}>
-                          <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
-                          <p>Title: {singleEp.title}</p>
-                          <p>Release Date: {singleEp.air_date}</p>
-                          <p> Characters Involved:</p>
-                          <p>{singleEp.characters}</p>
-                        </div>
-                      </>
-                    )
-                  }
-                })
-              )
-            })}
-                </div>
-            </div>
+            {/* onclick that calls scroll up function to guide users webpage to top of page */}
             <h2 className="scrollUp" onClick={this.scrollUp}>Click to go back to the top</h2>
           </div>
           <ReviewBox />

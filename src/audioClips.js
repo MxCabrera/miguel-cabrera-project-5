@@ -43,7 +43,8 @@ import salamanca from './assets/salamanca.mp3';
 import salamanca2 from './assets/salamanca2.mp3';
 import salamanca3 from './assets/salamanca3.mp3';
 
-// audio array
+// audio object containing several objects used to make the sound board
+// each object contains array of mp3 sounds imported, name, the quote and link to actor
 
 const audioClips = {
    'Walter White': { 
@@ -145,7 +146,3 @@ const audioClips = {
 }
 
 export default audioClips;
-
-// for (let i=0; i < audioClips.length; i++) {
-   // let show = audioClips[i].sound[Math.floor(Math.random() * audioClip[i]sound.length)]
-// }

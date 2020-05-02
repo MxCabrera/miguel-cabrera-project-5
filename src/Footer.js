@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './App.css';
-import firebase from './firebase';
 
 class Footer extends Component {
   render() {
+    // contains the copyright footer
     return (
         <footer>
             <div className="copyright">

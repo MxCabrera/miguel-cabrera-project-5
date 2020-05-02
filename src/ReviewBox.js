@@ -4,26 +4,33 @@ import firebase from './firebase';
 import Review from './Review'
 
 class ReviewBox extends Component {
+   // birthing of this life cycle, state
    constructor(){
       super()
+      // setting state with properties necessary for app to work
       this.state = {
          review: [],
          userInput: '',
          userNumber: 0
       }
    }
+   // componentDidMount to initialize firebase, storing it in a variable
+   // pushing firebase variable into state property
    componentDidMount() {
+      // storing firebase
       const dbRef = firebase.database().ref();
+      // when firebase value changes, call function
       dbRef.on('value', (results) => {
+         // saving parameter in variable
          const data = results.val()
          //turn data from object into an array. 
-         //for in loop would do that
          //creating a empty bad array and pushing the data[key] from firebase into the array we have. 
          const badArray = []
          for (let key in data) {
             const myStuff = data[key];
-            // instead of pushing a string, now we are pushing an object into the empty badArray.
+            // pushing object into the empty badArray.
             badArray.push({ badName: myStuff, badId: key })
+            // setting state with the badArray as the review property value.
             this.setState({
                review: badArray
             })
@@ -31,15 +38,16 @@ class ReviewBox extends Component {
       })
    }
 
+   // function that when user submits, pushes the user input value into firebase
    handleSubmit = (event) => {
       event.preventDefault()
-      // take the input from the user and add to this.state.review
-      // console.log(this.state.userInput)
-      // make a copy of this.state.review using SPREAD
-      // push the userInput into the new array, the code below uses below!
+      // if statement that checks if userInput is not an empty string, continue statement.
       if (this.state.userInput !== '') {
+         // storing firebase
          const dbRef = firebase.database().ref()
+         // pushing this.state.userInput value into firebase
          dbRef.push(this.state.userInput)
+         // setting state to make userInput on DOM clear when submitted
          this.setState({
             userInput: '',
             userNumber: this.state.userNumber + 1
@@ -47,7 +55,7 @@ class ReviewBox extends Component {
       }
    }
 
-
+   // function that determines what the user has typed out and stores it in state.
    handleUserInput = (event) => {
       // take event.target.value, or what the user is typing
       // put it into this.state.userInput property
@@ -63,10 +71,10 @@ class ReviewBox extends Component {
             <div className="reviewBox">
                <h1 className="reviewTitle">Write Your Bad Reviews</h1>
                <ul className="reviewComp">
-                  {/* your calling this state to access the bad array which is mapped out and put into a review parameter, we call the Review/> and add an attribute badtitle which is used inthe review/> component */}
+                  {/* mapped review property fron state to display data */}
                   {this.state.review.map((singleReview) => {
-                     // console.log(singleReview.badId)
                      return (
+                        // review class component imported from Review.js
                         <Review badId={singleReview.badId} badTitle={singleReview.badName} />
                      )
                   })}
@@ -76,7 +84,9 @@ class ReviewBox extends Component {
                   <input 
                   type="text" 
                   className="reviewInput" 
+                  // value of input is the userInput from state
                   value={this.state.userInput} 
+                  // when input changes, call handleUserInput function
                   onChange={this.handleUserInput} 
                   placeholder="Tell us what you love about Breaking Bad or if you enjoyed this app!"
                   />

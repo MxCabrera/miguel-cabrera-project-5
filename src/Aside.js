@@ -6,11 +6,12 @@ function Aside() {
       <aside className="wrapper">
          <div className="nav">
             <nav>
-                  <ul className="flex">
-                     <li><a href="https://breakingbadapi.com/documentation">Breaking Bad API</a></li>
-                     <li><a href="http://www.mcabrera.ca">My Portfolio</a></li>
+               <ul className="flex">
+                  {/* navigation for links to related websites for project */}
+                  <li><a href="https://breakingbadapi.com/documentation">Breaking Bad API</a></li>
+                  <li><a href="http://www.mcabrera.ca">My Portfolio</a></li>
                   <li><a href="https://breakingbad.fandom.com/wiki/Breaking_Bad_Wiki">Official Website</a></li>
-                  </ul>
+               </ul>
             </nav>
             </div>
          <h3 className="credits">Breaking Bad API was used to create this App. Photos and audio files are not mine, and are owned by there respective creators</h3>
