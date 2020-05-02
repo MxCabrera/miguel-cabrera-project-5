@@ -13,7 +13,7 @@ import shows from './assets/shows.mp3';
 import soundboard from './assets/soundboard.mp3'
 
 class App extends Component {
-  // the birthing of the lifecycle, creation of state
+  // the birthing of the lifecycle, and creation of state
   constructor() {
     super();
     // state containing necessary property for app to work
