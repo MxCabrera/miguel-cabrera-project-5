@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "610a4396ba48dbd454eeb3431ffc114b",
+    "revision": "8c3dce80624f74aa6e9375b99a3a8aa1",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "4bcf69881f2e45cdb8c1",
-    "url": "/miguel-cabrera-project-5/static/css/main.7f64da6a.chunk.css"
+    "revision": "97bb30588e96fd3c3fd8",
+    "url": "/miguel-cabrera-project-5/static/css/main.ab81bf95.chunk.css"
   },
   {
-    "revision": "11126659569a43b5fb14",
-    "url": "/miguel-cabrera-project-5/static/js/2.2249793b.chunk.js"
+    "revision": "dabf2a734fd160422173",
+    "url": "/miguel-cabrera-project-5/static/js/2.d77a36ea.chunk.js"
   },
   {
     "revision": "21d6b61128df164bc1aa77feff23b023",
-    "url": "/miguel-cabrera-project-5/static/js/2.2249793b.chunk.js.LICENSE.txt"
+    "url": "/miguel-cabrera-project-5/static/js/2.d77a36ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "4bcf69881f2e45cdb8c1",
-    "url": "/miguel-cabrera-project-5/static/js/main.5d599d3b.chunk.js"
+    "revision": "97bb30588e96fd3c3fd8",
+    "url": "/miguel-cabrera-project-5/static/js/main.fea58123.chunk.js"
   },
   {
     "revision": "13fe450e6be4a5124201",
@@ -50,6 +50,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "845da50589e0d3e2854bce08736855d3",
     "url": "/miguel-cabrera-project-5/static/media/domingoMolina.845da505.mp3"
+  },
+  {
+    "revision": "16ed6f24eee2710975ea2516f846b544",
+    "url": "/miguel-cabrera-project-5/static/media/gunshot.16ed6f24.mp3"
   },
   {
     "revision": "a9e458e8c80efdb26fb1312d1f4cb1c7",
@@ -160,12 +164,20 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/media/saulGoodman.27c2ef54.mp3"
   },
   {
+    "revision": "2fc64bbc416d6db4be2e79ee03ec3593",
+    "url": "/miguel-cabrera-project-5/static/media/shows.2fc64bbc.mp3"
+  },
+  {
     "revision": "5d86f3a190797cdd566f815c57dc5a6b",
     "url": "/miguel-cabrera-project-5/static/media/skylarWhite1.5d86f3a1.mp3"
   },
   {
     "revision": "d4426974e25daa7f4027965e25072a99",
     "url": "/miguel-cabrera-project-5/static/media/skylarWhite2.d4426974.mp3"
+  },
+  {
+    "revision": "3fb52cb62f949b67c3db34913de789f1",
+    "url": "/miguel-cabrera-project-5/static/media/soundboard.3fb52cb6.mp3"
   },
   {
     "revision": "c101e5c82c123a951fc67f8da50dfb95",
