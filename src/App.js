@@ -8,7 +8,7 @@ import './Setup.css';
 import axios from 'axios';
 import audioClips from './audioClips';
 import ReviewBox from './ReviewBox';
-import gunshot from './assets/gunshot.mp3';
+import gunshot from './assets/salamanca.mp3';
 import shows from './assets/shows.mp3';
 import soundboard from './assets/soundboard.mp3'
 
