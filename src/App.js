@@ -33,7 +33,7 @@ class App extends Component {
     };
   };
 
-  // calling getApiData immediately when the component mounts on DOM.
+  // calling getApiData immediately when the component mounts on DOM
   componentDidMount() {
     this.getApiData();
   }
