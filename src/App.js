@@ -7,7 +7,10 @@ import Aside from './Aside'
 import './Setup.css';
 import axios from 'axios';
 import audioClips from './audioClips';
-import ReviewBox from './ReviewBox'
+import ReviewBox from './ReviewBox';
+import gunshot from './assets/gunshot.mp3';
+import shows from './assets/shows.mp3';
+import soundboard from './assets/soundboard.mp3'
 
 class App extends Component {
   // the birthing of the lifecycle, creation of state
@@ -37,7 +40,7 @@ class App extends Component {
 
   // function that uses axios to grab information from selected API
   getApiData = () => {
-    // storing the API url endpoints into seperate variables
+    // storing the API url endpoints into separate variables
     let characters =`https://www.breakingbadapi.com/api/characters?limit=16`
     let quotes = `https://www.breakingbadapi.com/api/quotes/`
     let death = `https://www.breakingbadapi.com/api/deaths/`
@@ -54,7 +57,7 @@ class App extends Component {
       const infoTwo = responses[1];
       const infoThree = responses[2];
       const infoFour = responses[3];
-      // setting the state, pushing each variable into a property, enclose in an array.
+      // setting the state, pushing each variable into a property, enclosing it in an array.
       this.setState({
         breakBadArray: responses,
         charArray: [infoOne],
@@ -69,23 +72,23 @@ class App extends Component {
   }
 
 
-  // function that takes info passed on from onClick and randomly chooses file from array of audio files.
+  // function that takes info passed from onClick and randomly chooses a mp3 file from array of audio
   CreateSounds = (src) => {
     // storing parameter into variable
     const characterSounds = src;
-    // grabbing random mp3 file from array and storing it.
+    // grabbing a random mp3 file from array and storing it
     const random = characterSounds[Math.floor(Math.random() * characterSounds.length)];
-    // calling function with randomly chosen mp3 file.
+    // calling function with randomly chosen mp3 file
     this.BadSounds(random)
   }
 
-  // function that takes the audio file randomly chosen, store it in state, and play it.
+  // function that takes the audio file that's randomly chosen, store it in state, and play it
   BadSounds = (src) => {
-    // if this.state.soundStorage is true, undefined is equal to false, so if theres a sound already in there, stop it. If theres something inside sound storage (in this case its the clicked sound), it is no longer undefined(false) its true, and since its asking if this.state.soundStorage is true then it will stop it.
+    // if this.state.soundStorage is true, undefined is equal to false, so if theres a sound already in there, stop it. If theres something inside sound storage (in this case its the clicked sound), it is no longer undefined(false) its true, and since its asking if this.state.soundStorage is true then it will stop it
     if (this.state.soundStorage) {
       this.state.soundStorage.stop()
     }
-    // creating sound variable containing howler.js library that create an object with the parameter passed from the onClick.
+    // sound variable containing howler.js library that create an object with parameter passed from onClick.
     const sound = new Howl({
       src
     });
@@ -96,9 +99,39 @@ class App extends Component {
     // playing the audio file in DOM.
     sound.play()
   };
+  
+  // when called plays audio file and changes state to show selected sections
+  playSection = (src) => {
+    this.audio = new Audio(src);
+    // play audio 
+    this.audio.play();
+    // is src === the import file, then change state to show section.
+    if (src === shows) {
+      this.setState({
+        //state values to be opposite of current value
+        // set state of the related property value to false
+        // user will see clicked section only
+        endpoint3: !this.state.endpoint3, 
+        endpoint1: false, 
+        endpoint2: false,
+      })
+    } else if ( src === soundboard) {
+      this.setState({
+        endpoint1 : !this.state.endpoint1, 
+        endpoint2: false, 
+        endpoint3: false
+      })
+    } else if (src === gunshot) {
+      this.setState({
+        endpoint2: !this.state.endpoint2, 
+        endpoint1: false, 
+        endpoint3: false
+      })
+    }
+  }
 
 
-  // function that when clicked scrolls the users web page to the top of page
+  // function when clicked scrolls web page to the top
   scrollUp = () => {
     window.scrollTo(0,0)
   }
@@ -108,7 +141,9 @@ class App extends Component {
     Howler.volume(0.5);
     return (
       <>
+
       <Header />
+
       <main>
         <section>
           {/* main title  */}
@@ -119,18 +154,16 @@ class App extends Component {
           <div>
             <button 
             className="topicButtons" 
-            // changing state values to be opposite of current value
-            // set state of the related property value to false
-            // user will see clicked section only
-            onClick={() => this.setState({endpoint3: !this.state.endpoint3, endpoint1: false, endpoint2: false})}
+            // onClick to call playSection function with imported file as parameter
+            onClick={() => this.playSection(shows)}
             >Shows</button>
             <button 
             className="topicButtons" 
-            onClick={()=> this.setState({endpoint1 : !this.state.endpoint1, endpoint2: false, endpoint3: false})}
+            onClick={()=> this.playSection(soundboard)}
             >Sound Board</button>
             <button 
             className="topicButtons" 
-            onClick={() => this.setState({endpoint2: !this.state.endpoint2, endpoint1: false, endpoint3: false})}
+            onClick={() => this.playSection(gunshot)}
             >Deaths</button>
           </div>
 
@@ -152,7 +185,7 @@ class App extends Component {
                     <div className="actorSound" key={index} onClick={() => this.CreateSounds(audioClips[deeper.name].sound)}>
                       <li className="characterBox" key={index}>
                         <div>
-                          <img src={deeper.img} alt="" />
+                          <img src={deeper.img} alt={deeper.name} />
                         </div>
                         <div className="infoBox">
                           <h2>{deeper.name}</h2>
@@ -160,7 +193,12 @@ class App extends Component {
                             <h3><span className="infoStats">Nickname:</span> {deeper.nickname}</h3>
                             <p><span className="infoStats">Birthday:</span> {deeper.birthday}</p>
                             <p><span className="infoStats">Actor:</span><a href={audioClips[deeper.name].link}> {deeper.portrayed}</a> </p>
-                            <p><span className="infoStats">Occupation:</span> {deeper.occupation} </p>
+                            <p><span className="infoStats">Occupation:</span></p>
+                            {deeper.occupation.map((occupation)=>{
+                              return(
+                                <p> {occupation} </p>
+                              )
+                            })}
                             <p><span className="infoStats">Health Statue:</span> {deeper.status}</p>
                             <p><span className="infoStats">Appearances:</span> {deeper.category}</p>
                             <p><span className="infoStats">Quote:</span> "{audioClips[deeper.name].quote}"</p>
@@ -221,7 +259,7 @@ class App extends Component {
             {/* deaths endpoint section */}
             {/* ternary operator to determine if user wants to see this section if not, display none */}
             <div className={this.state.endpoint2 ? "" : "endpoint2"}>
-              <h2 className="deathTitle">Death List</h2>
+              <h2 className="deathTitle">List of Deceased:</h2>
               <h3 className="spoilers">*Warning: SPOILERS*</h3>
                 <div className="flex">
                 {/* map method on deathArray from state and display data */}
@@ -234,13 +272,15 @@ class App extends Component {
                       return (
                         // death section displayed on DOM
                         <div className="BscDiv">
-                          <h3 className="deathInfoT">Deceased: </h3>
                           <h3 className="deathInfoT"> <span className="whoDied">{singleDeath.death}</span></h3>
-                          <p className="deathInfo">Cause of Death: {singleDeath.cause} </p>
-                          <p className="deathInfo">Responsible: { singleDeath.responsible } </p>
-                          <p className="deathInfo">Last words: "{singleDeath.last_words}"</p>
-                          <p className="deathInfo"> Cause of Death: { singleDeath.cause } </p>
-                          <p className="deathInfo">What episode: Season {singleDeath.season}, Episode {singleDeath.episode}</p>
+                          <p className="deathInfo">Cause of Death:</p>
+                          <p className="showTitle">{singleDeath.cause}</p>
+                          <p className="deathInfo">Responsible:</p>
+                          <p className="showTitle">{singleDeath.responsible}</p>
+                          <p className="deathInfo">Last words:</p>
+                          <p className="showTitle">"{singleDeath.last_words}"</p>
+                          <p className="deathInfo">What episode:</p>
+                          <p className="showTitle"> Season {singleDeath.season}, Episode {singleDeath.episode}</p>
                         </div>
                       )
                     })
@@ -282,11 +322,16 @@ class App extends Component {
                           <>
                             {/* ternary operator to change between classes if user request it. */}
                             <div className={this.state.isBadThere ? "BBDiv" : 'breakingBadDiv'}>
-                              <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
-                              <p>Title: {singleEp.title}</p>
-                              <p>Release Date: {singleEp.air_date}</p>
-                              <p> Characters Involved:</p>
-                              <p>{singleEp.characters}</p>
+                              <h2 className="infoEp">Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                              <p className="showTitle">Title: {singleEp.title}</p>
+                              <p className="infoShow">Release Date: </p>
+                              <p className="showTitle">{singleEp.air_date}</p>
+                              <p className="infoShow"> Characters Involved:</p>
+                              {singleEp.characters.map((characters) => {
+                                return (
+                                  <p className="showTitle">- {characters}</p>
+                                )
+                              })}
                             </div>
                           </>
                         )
@@ -295,11 +340,16 @@ class App extends Component {
                         return(
                           <>
                             <div className={this.state.isSaulThere ? "BBDiv2" : "betterCallSaulDiv"}>
-                              <h2>Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
-                              <p>Title: {singleEp.title}</p>
-                              <p>Release Date: {singleEp.air_date}</p>
-                              <p> Characters Involved:</p>
-                              <p>{singleEp.characters}</p>
+                              <h2 className="infoEp">Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
+                              <p className="showTitle">Title: {singleEp.title}</p>
+                              <p className="infoShow">Release Date: </p>
+                              <p className="showTitle">{singleEp.air_date}</p>
+                              <p className="infoShow"> Characters Involved:</p>
+                              {singleEp.characters.map((characters)=>{
+                                return(
+                                  <p className="showTitle">- {characters}</p>
+                                )
+                              })}
                             </div>
                           </>
                         )
@@ -312,10 +362,15 @@ class App extends Component {
             {/* onclick that calls scroll up function to guide users webpage to top of page */}
             <h2 className="scrollUp" onClick={this.scrollUp}>Click to go back to the top</h2>
           </div>
+
           <ReviewBox />
+        
         </section>
+        
         <Aside />
+
       </main>
+
       <Footer />
       </>
     );
