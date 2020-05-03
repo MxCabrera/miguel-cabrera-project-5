@@ -82,7 +82,7 @@ class ReviewBox extends Component {
                </ul>
                {/* take the input from the user and add to this.state.review */}
                <form className="form" action="" onSubmit={this.handleSubmit}>
-                  <input 
+                  <textarea 
                   type="text" 
                   className="reviewInput" 
                   // value of input is the userInput from state

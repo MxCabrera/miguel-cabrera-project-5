@@ -5,17 +5,13 @@ import firebase from './firebase';
 // import Moment from 'moment'
 
 function Review(props) {
-   // const moment = require('moment');
-   // const today = moment();
-   // const date = today.format('lll');
-   // let datetime = new Date()
-   // console.log(datetime);
-
 
    // deletes the selected list item that was previous submitted from firebase/DOM 
    const deleteReview = () => {
-      const itemRef = firebase.database().ref(props.badId)
-      itemRef.remove()
+      // ***TURNED THIS OFF***
+      // const itemRef = firebase.database().ref(props.badId)
+      // itemRef.remove()
+
    }
 
    return (
