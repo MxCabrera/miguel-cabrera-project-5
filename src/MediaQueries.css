@@ -10,14 +10,14 @@
 
 @media (max-width: 1140px) {
    .headerTitle {
-      font-size: 7.2rem;
+      font-size: 7rem;
    }
    .headerD {
       left: 27%;
       bottom: 35%;
    }
    .headerButton {
-      bottom: 19%;
+      bottom: 16%;
    }
 }
 
@@ -28,6 +28,7 @@
    .headerTitle {
       font-size: 6.5rem;
       width: 80%;
+      left: 10%;
    }
    .headerD {
       left: 22%;
@@ -42,12 +43,12 @@
    }
    .headerD {
       left: 20%;
-      bottom: 40%;
+      bottom: 34%;
       font-size: 1.8rem;
    }
    .headerButton {
       left: 42%;
-      bottom: 25%;
+      bottom: 16%;
 
    }
 }
@@ -55,6 +56,7 @@
 @media (max-width: 700px) {
    .headerTitle {
       font-size: 5rem;
+      top: 23%;
    }
    .headerD {
       font-size: 1.4rem;
@@ -73,12 +75,11 @@
    .headerTitle {
       width: 90%;
       left: 3%;
-      top: 25%;
+      top: 22%;
 
    }
    .headerD {
       left: 18%;
-      bottom: 38%;
       width: 60%;
    }
    .headerButton {
@@ -89,15 +90,52 @@
 @media (max-width: 400px) {
    .headerTitle {
       font-size: 4.5rem;
-      top: 10%;
+      top: 20%;
    }
    .headerButton {
       left: 31%;
    }
    .headerD {
-      bottom: 38%;
+      bottom: 32%;
    }
    .headerButton {
       bottom: 12%;
+      font-size: 1.3rem;
    }
 }
+
+/* @media (max-height: 768px){
+   .headerTitle {
+      top: 20%;
+   }
+   .headerD {
+      left: 24%;
+   }
+   .headerButton {
+      bottom: 16%;
+      left:43%;
+   }
+}
+
+@media (max-height: 732px) {
+   .headerD {
+      left: 20%;
+   }
+   .headerButton {
+      left: 33%;
+   }
+}
+
+
+@media (max-height: 667px){
+   .headerTitle {
+      top: 20%;
+   }
+   .headerD {
+      left: 22%;
+   }
+   .headerButton {
+      bottom: 16%;
+      left: 33%;
+   }
+} */
