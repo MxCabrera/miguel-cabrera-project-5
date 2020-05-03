@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "53bb8087480f4d4c367f28c9bcfae939",
+    "revision": "add00bdcd1d99fb7892b8d18bea637b8",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "e93d6c25051b722c7889",
-    "url": "/miguel-cabrera-project-5/static/css/main.1d7548b4.chunk.css"
+    "revision": "9ac0e85ecb9bd350599d",
+    "url": "/miguel-cabrera-project-5/static/css/main.fac99f95.chunk.css"
   },
   {
     "revision": "df0b3d948e256cc2b1eb",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e93d6c25051b722c7889",
-    "url": "/miguel-cabrera-project-5/static/js/main.36a7b05e.chunk.js"
+    "revision": "9ac0e85ecb9bd350599d",
+    "url": "/miguel-cabrera-project-5/static/js/main.d8b01ae2.chunk.js"
   },
   {
     "revision": "13fe450e6be4a5124201",
@@ -130,6 +130,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "58184e35b32c3e2a10adb3261dea8bb0",
     "url": "/miguel-cabrera-project-5/static/media/mikeEhrmantraut2.58184e35.mp3"
+  },
+  {
+    "revision": "4b332359cbcbeb38686b0081b2118b2d",
+    "url": "/miguel-cabrera-project-5/static/media/paper.4b332359.jpg"
   },
   {
     "revision": "be14a396b609e41013536e916e4e6eb6",
