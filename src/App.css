@@ -144,11 +144,14 @@ main,
 }
 
 .intro {
-  text-shadow: 1px 1px 8px rgb(255, 255, 255);
-  text-decoration: underline;
+  text-shadow: 1px 1px 18px rgb(255, 255, 255);
+  /* text-decoration: underline; */
   color: rgb(12, 12, 12);
-  margin: 3rem 0 3rem 0 ;
-  font-size: 4rem;
+  margin: 2.5rem auto ;
+  font-size: 6rem;
+  width: 62%;
+  line-height: 5.5rem;
+  letter-spacing: 0.5rem
 }
 
 .intro,
@@ -190,7 +193,7 @@ main,
 
 .topicButtons {
   background-color: rgb(255, 255, 255);
-  margin: 2rem 0.5rem 0rem 0.5rem;
+  margin: 2rem 0.5rem 2rem 0.5rem;
   border: 5px solid gray;
   padding: 0.7rem 1rem;
 }
@@ -212,7 +215,8 @@ main,
 .arrows {
   padding-top: 0.5rem;
   position: sticky;
-  float:right;
+  /* float:right; */
+  margin-bottom: -10rem;
   right: 0rem;
   top: 0rem;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
-import firebase from './firebase'
+import './MediaQueries.css';
+import firebase from './firebase';
 // import Moment from 'moment'
 
 function Review(props) {

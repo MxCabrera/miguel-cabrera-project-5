@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './MediaQueries.css';
 import Particles from 'react-particles-js'
 import Logo from './assets/breakingBad1.png';
 import intro from './assets/introSong.mp3';

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './MediaQueries.css';
 import firebase from './firebase';
 import Review from './Review'
 

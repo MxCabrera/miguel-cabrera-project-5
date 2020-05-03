@@ -152,9 +152,9 @@ class App extends Component {
       <main>
         <section>
           {/* main title  */}
-          <h1 className="intro">Albuquerques Most Wanted List</h1>
+          <h1 className="intro">Albuquerques Most Wanted</h1>
           <h3 className="hover">If you've seen them, call DEA</h3>
-          <h3 className="hover instructions"> click to hear your favourite characters 3 randomly selected quotes ! </h3>
+          <h3 className="hover instructions"> click to hear your favourite characters 3 randomly selected quotes! </h3>
           {/* main buttons*/}
           <div>
             <button 
@@ -165,7 +165,7 @@ class App extends Component {
             <button 
             className="topicButtons" 
             onClick={()=> this.playSection(soundboard)}
-            >Sound Board</button>
+            >SoundBoard</button>
             <button 
             className="topicButtons" 
             onClick={() => this.playSection(gunshot)}

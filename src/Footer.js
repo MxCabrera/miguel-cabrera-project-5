@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
-
+import './MediaQueries.css';
 class Footer extends Component {
   render() {
     // contains the copyright footer

@@ -3,12 +3,29 @@
 
 
 @media (max-width: 1260px) {
+
+   /* header styles */
+
   .headerD {
     left: 29%;
    }
+
+   /* main styles */
+
+   .intro {
+      font-size: 5rem;
+      line-height: 4.7rem;
+   }
+
 }
 
 @media (max-width: 1140px) {
+   .wrapper {
+      width: 90%;
+   }
+
+   /* header styles */
+   
    .headerTitle {
       font-size: 7rem;
    }
@@ -19,12 +36,23 @@
    .headerButton {
       bottom: 16%;
    }
+
+   /* main styles */
+
+   .intro {
+      font-size: 4rem;
+      line-height: 3.5rem;
+   }
+   
 }
 
 @media (max-width: 1000px){
    .wrapper {
-      width: 90%;
+      width: 92%;
    }
+
+   /* header styles */
+   
    .headerTitle {
       font-size: 6.5rem;
       width: 80%;
@@ -33,10 +61,47 @@
    .headerD {
       left: 22%;
    }
+
+   /* main styles */
+
+   .intro {
+      line-height: 3.8rem;
+      width: 60%;
+   }
+   .hover {
+      width: 60%;
+   }
+   .topicButtons {
+      font-size: 1.2rem;
+      margin: 2rem 0.5rem 4rem 0.5rem;
+   }
+
+   /* cork board wrapper */
+
+   .space {
+      margin-top: 3rem;
+   }
+   .wrapper {
+      width: 92%;
+   }
+   .arrow1,
+   .arrow2 {
+      width: 2.1rem;
+      height: 2.1rem;
+   }
+   .actorSound {
+      width: 22%;
+   }
+   img {
+      height: 250px;
+   }
 }
 
 
 @media (max-width: 840px) {
+
+   /* header styles */
+   
    .headerTitle {
       font-size: 5.5rem;
       left: 10%;
@@ -49,11 +114,42 @@
    .headerButton {
       left: 42%;
       bottom: 16%;
+   }
 
+   /* main styles */
+   .intro {
+      font-size: 4rem;
+      width: 70%;
+      margin: 2rem auto;
+   }
+   .instructions {
+      width: 55%;
+   }
+   .topicButtons {
+      margin-bottom: 2rem;
+   }
+   .arrows {
+      margin-bottom: -8rem;
+      margin-left: -1rem;
+   }
+   .characterBox {
+      padding: 0.7rem;
+   }
+   img {
+      height: 220px;
+   }
+}
+
+@media (max-width: 740px) {
+   .actorSound {
+      width: 21%;
    }
 }
 
 @media (max-width: 700px) {
+
+   /* header styles */
+   
    .headerTitle {
       font-size: 5rem;
       top: 23%;
@@ -64,19 +160,79 @@
    }
    .headerButton {
       left: 41%;
+   }
 
+   /* main styles */
+
+   main {
+      padding: 0.7rem;
+   }
+
+   .space {
+      border: 1.5rem solid #000;
+   }
+   
+   .intro {
+      font-size: 3.25rem;
+      line-height: 3rem;
+      width: 80%;
+   }
+   .hover {
+      font-size: 1.7rem;
+   }
+   .instructions {
+      font-size: 1.3rem;
+      margin: 0 auto;
+      width: 70%;
+   }
+   .topicButtons {
+      font-size: 1.0rem;
+      padding: 0.5rem 0.8rem;
+      margin-bottom: 4rem;
+   }
+   .wrapper {
+      width: 95%;
+   }
+   .arrows {
+      margin-left: 3rem;
+      margin-bottom: -10rem;
+   }
+
+   .mainTitle {
+      font-size: 3.5rem;
+   }
+   .actorSound {
+      width: 30%;
+   }
+   .characterBox {
+      padding: 0.7rem;
+   }
+   
+}
+
+@media (max-width: 620px ) {
+
+   .actorSound {
+      width: 45%;
    }
 }
+
+
+
+
+
 
 @media (max-width: 575px){
    .wrapper {
       width: 95%;
    }
+
+   /* header */
+   
    .headerTitle {
       width: 90%;
       left: 3%;
       top: 22%;
-
    }
    .headerD {
       left: 18%;
@@ -85,9 +241,81 @@
    .headerButton {
       left: 35%;
    }
+
+   /* main styles */
+   
+   .intro {
+      font-size: 2.8rem;
+      margin: 2rem auto;
+      width: 90%;
+      line-height: 2.7rem;
+   }
+   .hover {
+      font-size: 1.3rem;
+      letter-spacing: 1.2px;
+      width: 70%;
+   }
+   .instructions {
+      font-size: 1.1rem;
+      width: 90%;
+   }
+   .topicButtons {
+      font-size: 0.8rem;
+      padding: 0.5rem 0.8rem;
+      letter-spacing: 1.8px;
+      border: 3.5px solid gray;
+      margin: 1.2rem 0.3rem 4rem 0.3rem;
+   }
+   .arrows {
+      margin-left: 3rem;
+      margin-bottom: -10rem;
+      z-index: 1000;
+   }
+
+   .mainTitle {
+      font-size: 3rem;
+   }
+   
 }
 
+
+@media (max-width: 430px) {
+   
+   .intro {
+      font-size: 2.4rem;
+      line-height: 2rem
+   }
+   .hover {
+      width: 85%;
+   }
+   .instructions {
+      width: 95%;
+   }
+   .arrows {
+      margin-left: 2rem;
+      margin-bottom: -9rem;
+   }
+   .space {
+      border: 0.7rem solid #000;
+   }
+   .badSounds {
+      padding: 0.8rem 1.4rem;
+   }
+   .mainTitle {
+      font-size: 2.5rem;
+   }
+   .actorSound {
+      width: 45%;
+   }
+
+   
+}
+
+
 @media (max-width: 400px) {
+
+   /* header styles */
+   
    .headerTitle {
       font-size: 4.5rem;
       top: 20%;
@@ -102,40 +330,49 @@
       bottom: 12%;
       font-size: 1.3rem;
    }
+
+   /* main styles */
+
+   main {
+      padding: 0.5rem;
+   }
+   
+   .intro {
+      font-size: 2rem;
+      width: 100%;
+   }
+   .hover {
+      font-size: 1rem;
+   }
+   .instructions {
+      font-size: 0.9rem;
+   }
+   .topicButtons {
+      font-size: 0.8rem;
+      padding: 0.3rem 0.7rem;
+      letter-spacing: 1.4px;
+      margin: 1.2rem 0.2rem 4rem 0.2rem;
+   }
+   .arrows {
+      margin-bottom: -9rem;
+   }
+   .arrow1,
+   .arrow2 {
+      width: 1.5rem;
+      height: 1.5rem;
+   }
+   .mainTitle {
+      font-size: 2rem;
+   }
+   .actorSound {
+      width: 42%;
+   }
+   img {
+      height: 150px;
+   }
+
+
 }
 
-/* @media (max-height: 768px){
-   .headerTitle {
-      top: 20%;
-   }
-   .headerD {
-      left: 24%;
-   }
-   .headerButton {
-      bottom: 16%;
-      left:43%;
-   }
-}
 
-@media (max-height: 732px) {
-   .headerD {
-      left: 20%;
-   }
-   .headerButton {
-      left: 33%;
-   }
-}
-
-
-@media (max-height: 667px){
-   .headerTitle {
-      top: 20%;
-   }
-   .headerD {
-      left: 22%;
-   }
-   .headerButton {
-      bottom: 16%;
-      left: 33%;
-   }
-} */
+@media (max-width: 360px)
