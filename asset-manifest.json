@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/miguel-cabrera-project-5/static/css/main.3f12b757.chunk.css",
+    "main.css": "/miguel-cabrera-project-5/static/css/main.115f84b6.chunk.css",
     "main.js": "/miguel-cabrera-project-5/static/js/main.90358579.chunk.js",
     "main.js.map": "/miguel-cabrera-project-5/static/js/main.90358579.chunk.js.map",
     "runtime-main.js": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js",
@@ -8,9 +8,9 @@
     "static/js/2.787cea51.chunk.js": "/miguel-cabrera-project-5/static/js/2.787cea51.chunk.js",
     "static/js/2.787cea51.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.787cea51.chunk.js.map",
     "index.html": "/miguel-cabrera-project-5/index.html",
-    "precache-manifest.edc0791b62a3dd9d8c30c7a01ef89cf4.js": "/miguel-cabrera-project-5/precache-manifest.edc0791b62a3dd9d8c30c7a01ef89cf4.js",
+    "precache-manifest.04ffb343b1db9ea6873e4a13f2000eb2.js": "/miguel-cabrera-project-5/precache-manifest.04ffb343b1db9ea6873e4a13f2000eb2.js",
     "service-worker.js": "/miguel-cabrera-project-5/service-worker.js",
-    "static/css/main.3f12b757.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.3f12b757.chunk.css.map",
+    "static/css/main.115f84b6.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.115f84b6.chunk.css.map",
     "static/js/2.787cea51.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.787cea51.chunk.js.LICENSE.txt",
     "static/media/Hank.mp3": "/miguel-cabrera-project-5/static/media/Hank.248448bd.mp3",
     "static/media/breakingBad1.png": "/miguel-cabrera-project-5/static/media/breakingBad1.3795f66d.png",
@@ -64,7 +64,7 @@
   "entrypoints": [
     "static/js/runtime-main.09b83635.js",
     "static/js/2.787cea51.chunk.js",
-    "static/css/main.3f12b757.chunk.css",
+    "static/css/main.115f84b6.chunk.css",
     "static/js/main.90358579.chunk.js"
   ]
 }
