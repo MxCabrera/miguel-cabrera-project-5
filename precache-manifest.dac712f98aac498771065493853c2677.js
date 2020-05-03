@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "add00bdcd1d99fb7892b8d18bea637b8",
+    "revision": "3c468ae95bc162a77044c1d1ae6eb1e9",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "9ac0e85ecb9bd350599d",
-    "url": "/miguel-cabrera-project-5/static/css/main.fac99f95.chunk.css"
+    "revision": "82f168de992e664105c9",
+    "url": "/miguel-cabrera-project-5/static/css/main.347a1d12.chunk.css"
   },
   {
-    "revision": "df0b3d948e256cc2b1eb",
-    "url": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js"
+    "revision": "5c6d6c7dda7cb68730a3",
+    "url": "/miguel-cabrera-project-5/static/js/2.787cea51.chunk.js"
   },
   {
     "revision": "21d6b61128df164bc1aa77feff23b023",
-    "url": "/miguel-cabrera-project-5/static/js/2.dfae252c.chunk.js.LICENSE.txt"
+    "url": "/miguel-cabrera-project-5/static/js/2.787cea51.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9ac0e85ecb9bd350599d",
-    "url": "/miguel-cabrera-project-5/static/js/main.d8b01ae2.chunk.js"
+    "revision": "82f168de992e664105c9",
+    "url": "/miguel-cabrera-project-5/static/js/main.c38f17bd.chunk.js"
   },
   {
     "revision": "13fe450e6be4a5124201",
