@@ -95,6 +95,9 @@
       left: 31%;
    }
    .headerD {
-      bottom: 50%;
+      bottom: 38%;
+   }
+   .headerButton {
+      bottom: 12%;
    }
 }
