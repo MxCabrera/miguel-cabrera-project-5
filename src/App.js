@@ -379,7 +379,6 @@ class App extends Component {
               </div>
             </div>
             {/* onclick that calls scroll up function to guide users webpage to top of page */}
-            <h2 className="scrollUp" onClick={this.scrollUp}>Click to go back to the top</h2>
           </div>
           </div>
 

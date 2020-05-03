@@ -1,6 +1,8 @@
 @media (max-width: 1400px){
 }
 
+/******** 1260 px  ********/
+
 
 @media (max-width: 1260px) {
 
@@ -17,7 +19,17 @@
       line-height: 4.7rem;
    }
 
+   /* season section styles */
+   .BBDiv2:hover,
+   .BBDiv:hover {
+      transform: rotate(353deg);
+   }
+
 }
+
+
+/******** 1140 px  ********/
+
 
 @media (max-width: 1140px) {
    .wrapper {
@@ -43,8 +55,22 @@
       font-size: 4rem;
       line-height: 3.5rem;
    }
-   
+   /* death section styles */
+   .deathInfoT {
+      font-size: 1.7rem;
+   }
+   .deathInfo {
+      font-size: 1.1rem;
+   }
+   .showTitle {
+      font-size: 1.3rem;
+   }
 }
+
+
+/******** 1000px  ********/
+
+
 
 @media (max-width: 1000px){
    .wrapper {
@@ -60,6 +86,9 @@
    }
    .headerD {
       left: 22%;
+   }
+   .headerButton {
+      left: 43%;
    }
 
    /* main styles */
@@ -95,7 +124,62 @@
    img {
       height: 250px;
    }
+   .infoBox h2 {
+      font-size: 1.4rem;
+   }
+   .infoStats {
+      font-size: 0.75rem;
+   }
+   .infoBox h3 {
+      font-size: 1.2rem;
+   }
+   .infoBox h3,
+   .infoBox p {
+      line-height: 1.2rem;
+   }
+
+   /* quote section styles */
+
+   .quoteBox {
+      width: 70%;
+   }
+   .quoteBox .quoteTop {
+      font-size: 2.5rem;
+   }
+   .quoteBox h2,
+   .quoteButton {
+      font-size: 1.3rem;
+   }
+
+   /* season section styles */
+   .mainTitle {
+      font-size: 3.5rem;
+   }
+   .showButtons {
+      font-size: 1.1rem;
+      letter-spacing: 1.3px;
+   }
+   .infoEp,
+   .infoShow,
+   .showTitle {
+      font-size: 1.3rem;
+   }
+   /* death section styles */
+   .deathInfoT {
+      font-size: 1.5rem;
+   }
+   .deathInfo {
+      font-size: 1rem;
+   }
+   .showTitle {
+      font-size: 1.1rem;
+   }
 }
+
+
+
+
+/******** 840px  ********/
 
 
 @media (max-width: 840px) {
@@ -107,9 +191,10 @@
       left: 10%;
    }
    .headerD {
-      left: 20%;
+      left: 17%;
       bottom: 34%;
       font-size: 1.8rem;
+      width: 70%;
    }
    .headerButton {
       left: 42%;
@@ -138,13 +223,58 @@
    img {
       height: 220px;
    }
+
+   /* quote section styles */
+   .quoteBox {
+      width: 85%;
+   }
+
+   /* season section styles */
+
+   .infoEp,
+   .infoShow,
+   .showTitle {
+      font-size: 1.1rem;
+   }
+
+   /* review box styles */
+   .reviewBox,
+   .reviewInput {
+      width: 90%;
+   }
+   /* aside section styles */
+   .credits {
+      width: 70%;
+   }
+   .mainTitle {
+      font-size: 3rem;
+   }
 }
+
+
+/******** 740 px  ********/
+
+
 
 @media (max-width: 740px) {
    .actorSound {
-      width: 21%;
+      width: 30%;
+   }
+   .BscDiv {
+      width: 45%;
+      padding: 1rem 0.5rem;
+   }
+   .reviewComp {
+      padding: 2rem;
+   }
+   .reviewInput {
+      margin-top: 0.7rem;
    }
 }
+
+
+/******** 700px  ********/
+
 
 @media (max-width: 700px) {
 
@@ -156,7 +286,7 @@
    }
    .headerD {
       font-size: 1.4rem;
-      left: 22%;
+      left: 17%;
    }
    .headerButton {
       left: 41%;
@@ -201,23 +331,96 @@
    .mainTitle {
       font-size: 3.5rem;
    }
-   .actorSound {
-      width: 30%;
-   }
    .characterBox {
       padding: 0.7rem;
    }
+
+   /* season section styles */
+
+   .titleDiv {
+      width: 60%;
+   }
+   .mainTitle {
+      font-size: 2.5rem;
+   }
+   .BBDiv {
+      width: 45%;
+   }
+   .infoEp,
+   .infoShow,
+   .showTitle {
+      font-size: 1.3rem;
+   }
+
+   /* review box styles  */
+
+   .reviewBox,
+   .reviewInput {
+      width: 95%;
+   }
+
+   /* aside section styles */
+
+   .nav {
+      width: 90%;
+      margin: 5rem auto 3rem auto;
+      font-size: 1.3rem;
+   }
+   .credits {
+      width: 75%;
+      margin-bottom: 1rem;
+   }
    
 }
+
+
+/******** 620 px  ********/
+
+
 
 @media (max-width: 620px ) {
 
    .actorSound {
       width: 45%;
    }
+   .headerButton {
+      font-size: 1.3rem;
+   }
+
+   /* quote section styles */
+
+   .quoteBox {
+      width: 92%;
+      padding: 1.5rem;
+   }
+   .quoteBox h3,
+   .quoteButton {
+      font-size: 1.1rem;
+      letter-spacing: 1.8px;
+   }
+   .quizChoices label {
+      font-size: 1rem;
+   }
+
+   /* season section styles */
+   .infoEp,
+   .infoShow,
+   .showTitle {
+      font-size: 1.1rem;
+   }
+
+   /* review box styles */
+
+   .reviewBox,
+   .reviewInput {
+      width: 100%;
+   }
 }
 
 
+
+
+/******** 575 px  ********/
 
 
 
@@ -235,11 +438,11 @@
       top: 22%;
    }
    .headerD {
-      left: 18%;
-      width: 60%;
+      left: 14%;
+      width: 72%;
    }
    .headerButton {
-      left: 35%;
+      left: 36%;
    }
 
    /* main styles */
@@ -269,17 +472,70 @@
    .arrows {
       margin-left: 3rem;
       margin-bottom: -10rem;
-      z-index: 1000;
    }
 
+   /* season sections styles */
+
+   .titleDiv {
+      width: 75%;
+   }
    .mainTitle {
       font-size: 3rem;
    }
+   .showButtons {
+      font-size: 0.9rem;
+      letter-spacing: 1.1px;
+   }
+   .infoEp,
+   .infoShow,
+   .showTitle {
+      font-size: 0.95rem;
+   }
+
    
+   /* review box styles  */
+
+   .reviewComp {
+      padding: 1.3rem;
+   }
+   .reviewInput {
+      font-size: 0.8rem;
+   }
+
+   /* aside section styles */
+
+   .nav {
+      width: 95%;
+      margin: 8rem auto 3rem auto;
+      font-size: 1.6rem;
+   }
+   .nav ul {
+      flex-direction: column;
+      height: 8rem;
+   }
+   .nav ul a{
+      padding: 0.7rem;
+   }
+   .credits {
+      width: 85%;
+      font-size: 0.8rem;
+      line-height: 0.9rem;
+   }
+
+   .copyright p {
+      font-size: 0.8rem;
+      letter-spacing: 2px;
+   }
 }
 
 
+
+/******** 430 px  ********/
+
+
 @media (max-width: 430px) {
+
+   /* main styles  */
    
    .intro {
       font-size: 2.4rem;
@@ -298,22 +554,58 @@
    .space {
       border: 0.7rem solid #000;
    }
+
+   /* character cards styles */
+
    .badSounds {
       padding: 0.8rem 1.4rem;
    }
+   .actorSound {
+      width: 45%;
+   }
+
+   /* season section styles */
+
    .mainTitle {
       font-size: 2.5rem;
    }
-   .actorSound {
-      width: 45%;
+   .showButtons {
+      font-size: 0.7rem;
+      letter-spacing: 1.3px;
+   }
+
+   /* death section styles */
+   .BscDiv {
+      margin: 0.2rem;
+   }
+   .BscDiv:hover {
+      transform: scale(1.1);
+   }
+   
+   /* quote section styles */
+   
+   .quoteBox {
+      padding: 1rem;
+   }
+   .quoteBox .quoteTop {
+      font-size: 2rem;
+   }
+   .quoteBox h2 {
+      font-size: 1.1rem;
    }
 
    
 }
 
 
-@media (max-width: 400px) {
+/******** 400 px  ********/
 
+
+
+@media (max-width: 400px) {
+   .wrapper {
+      width: 100%;
+   }
    /* header styles */
    
    .headerTitle {
@@ -321,14 +613,15 @@
       top: 20%;
    }
    .headerButton {
-      left: 31%;
+      left: 34%;
    }
    .headerD {
       bottom: 32%;
    }
    .headerButton {
       bottom: 12%;
-      font-size: 1.3rem;
+      font-size: 1.1rem;
+      padding: 0.7rem 1rem;
    }
 
    /* main styles */
@@ -354,7 +647,8 @@
       margin: 1.2rem 0.2rem 4rem 0.2rem;
    }
    .arrows {
-      margin-bottom: -9rem;
+      margin-bottom: -8rem;
+      margin-left: 1rem;
    }
    .arrow1,
    .arrow2 {
@@ -365,14 +659,72 @@
       font-size: 2rem;
    }
    .actorSound {
-      width: 42%;
+      width: 44%;
+      margin: 0.3rem;
+   }
+   .characterBox {
+      padding: 0.5rem;
    }
    img {
       height: 150px;
+   }
+   .infoBox h2 {
+      font-size: 1.2rem;
+   }
+   .infoBox h3 {
+      font-size: 1rem;
+   }
+   .infoBox h3,
+   .infoBox p {
+      line-height: 1.2rem;
+      margin: 0.15rem 0;
+   }
+   .characterInfo {
+      font-size: 0.9rem;
+   }
+   .infoStats {
+      letter-spacing: 3px;
+   }
+   .pin {
+      padding: 0.005rem;
+      top: 1%;
+   }
+
+   /* season section styles */
+
+   .showButtons {
+      margin: 2rem 0.3rem 1rem 0.3rem;
+      letter-spacing: 1px;
+      padding: 0.3rem 0.6rem;
+   }
+   .BBDiv,
+   .BBDiv2 {
+      margin: 0.3rem;
+   }
+
+   /* review box styles */
+   .reviewBox {
+      padding: 1rem;
+   }
+   .reviewTitle {
+      margin: 0.7rem 0;
+   }
+   
+   /* footer styles */
+   .copyright p {
+      font-size: 0.7rem;
+      letter-spacing: 2px;
    }
 
 
 }
 
 
-@media (max-width: 360px)
+@media (max-width: 360px) {
+   .reviewBox {
+      padding: 1.3rem;
+   }
+   .reviewInput {
+      font-size: 0.7rem;
+   }
+}
