@@ -26,10 +26,10 @@ class Header extends Component {
                     // parameters to change the functionality of the interactive header
                     "particles": {
                         "number": {
-                            "value": 60
+                            "value": 37
                         },
                         "size": {
-                            "value": 8
+                            "value": 4
                         }
                     },
                     "interactivity": {

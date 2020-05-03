@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import './MediaQueries.css';
 import { Howl, Howler } from 'howler'
 import Header from './Header';
 import Footer from './Footer';

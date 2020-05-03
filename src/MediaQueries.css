@@ -1,0 +1,100 @@
+@media (max-width: 1400px){
+}
+
+
+@media (max-width: 1260px) {
+  .headerD {
+    left: 29%;
+   }
+}
+
+@media (max-width: 1140px) {
+   .headerTitle {
+      font-size: 7.2rem;
+   }
+   .headerD {
+      left: 27%;
+      bottom: 35%;
+   }
+   .headerButton {
+      bottom: 19%;
+   }
+}
+
+@media (max-width: 1000px){
+   .wrapper {
+      width: 90%;
+   }
+   .headerTitle {
+      font-size: 6.5rem;
+      width: 80%;
+   }
+   .headerD {
+      left: 22%;
+   }
+}
+
+
+@media (max-width: 840px) {
+   .headerTitle {
+      font-size: 5.5rem;
+      left: 10%;
+   }
+   .headerD {
+      left: 20%;
+      bottom: 40%;
+      font-size: 1.8rem;
+   }
+   .headerButton {
+      left: 42%;
+      bottom: 25%;
+
+   }
+}
+
+@media (max-width: 700px) {
+   .headerTitle {
+      font-size: 5rem;
+   }
+   .headerD {
+      font-size: 1.4rem;
+      left: 22%;
+   }
+   .headerButton {
+      left: 41%;
+
+   }
+}
+
+@media (max-width: 575px){
+   .wrapper {
+      width: 95%;
+   }
+   .headerTitle {
+      width: 90%;
+      left: 3%;
+      top: 25%;
+
+   }
+   .headerD {
+      left: 18%;
+      bottom: 38%;
+      width: 60%;
+   }
+   .headerButton {
+      left: 35%;
+   }
+}
+
+@media (max-width: 400px) {
+   .headerTitle {
+      font-size: 4.5rem;
+      top: 10%;
+   }
+   .headerButton {
+      left: 31%;
+   }
+   .headerD {
+      bottom: 50%;
+   }
+}
