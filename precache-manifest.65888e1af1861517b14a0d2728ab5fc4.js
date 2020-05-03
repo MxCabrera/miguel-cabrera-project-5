@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "4f444348b58654c9a0e051df63bbfe2a",
+    "revision": "b2c59b4892f5ad57d8e18fb547d142e0",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "9ad8d4b50740ba65198a",
-    "url": "/miguel-cabrera-project-5/static/css/main.c0c0868f.chunk.css"
+    "revision": "e5c3e96724a3d1efb362",
+    "url": "/miguel-cabrera-project-5/static/css/main.eaad347c.chunk.css"
   },
   {
     "revision": "ac428c1a17470f65d7dc",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/js/2.44548b9a.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9ad8d4b50740ba65198a",
+    "revision": "e5c3e96724a3d1efb362",
     "url": "/miguel-cabrera-project-5/static/js/main.0ccd8204.chunk.js"
   },
   {
