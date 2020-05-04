@@ -73,6 +73,13 @@ header,
   position: absolute;
 }
 
+.headerButton:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+.headerButton:active {
+  border: 2px solid lightblue;
+}
+
 .headerTitle,
 .headerD {
   text-shadow: 1px 1px 10px #fff;
@@ -161,6 +168,13 @@ main,
   box-shadow: 1px 1px 10px #000;
 }
 
+.topicButtons:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+.topicButtons:active {
+  border: 2px solid lightblue;
+}
+
 .hover {
   font-family: 'Shadows Into Light', cursive;
   text-shadow: 1px 1px 10px rgb(0, 0, 0);
@@ -231,6 +245,17 @@ main,
   height: 2.5rem;
   width: 2.5rem;
 }
+
+.arrow1:focus,
+.arrow2:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.arrow1:active,
+.arrow2:active {
+  border: 2px solid lightblue;
+}
+
 
 .arrow2 {
   transform: rotate(180deg);
@@ -310,6 +335,14 @@ main,
   width: 22%;
 }
 
+.actorSound:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.actorSound:active {
+  border: 1px solid lightblue;
+}
+
 .actorSound,
 .infoP {
   margin-bottom: 1rem;
@@ -345,6 +378,14 @@ main,
   display: block;
 }
 
+.characterBox:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.characterBox:active {
+  border: 1px solid lightblue;
+}
+
 .infoBox {
   padding-bottom: 1rem;
   text-align: left;
@@ -377,6 +418,15 @@ main,
 .scrollUp:hover {
   text-decoration: underline;
 }
+
+.characterInfo a:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.characterInfo a:active {
+  border: 1px solid lightblue;
+}
+
 
 .characterInfo {
   letter-spacing: 1.8px;
@@ -506,6 +556,13 @@ img {
   margin: 1rem 0;
 }
 
+.quizChoices label input:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+.quizChoices label input:active {
+  border: 1px solid lightblue;
+}
+
 .quizChoices,
 .quoteAnswers {
   font-size: 1.2rem;
@@ -523,7 +580,13 @@ img {
   padding: 0.5rem;
 }
 
+.quoteButton:focus{
+  box-shadow: 1px 1px 5px yellow;
+}
 
+.quoteButton:active{
+  border: 1px solid lightblue;
+}
 
 
 
@@ -630,6 +693,15 @@ img {
   font-size: 1.3rem;
 }
 
+.showButtons:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.showButtons:active {
+  border: 1px solid lightblue;
+}
+
+
 .showButtons,
 .infoEp {
    font-weight: 700;
@@ -687,6 +759,13 @@ img {
 .reviewInput {
   margin-top: 1rem;
 }
+.reviewInput:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.reviewInput:active {
+  border: 1px solid lightblue;
+}
 
 .reviewTitle {
   font-size: 2rem;
@@ -707,6 +786,14 @@ img {
 .reviewSubmit {
   letter-spacing: 1.2px;
   margin-top: 1rem;
+}
+
+.reviewSubmit:focus {
+  box-shadow: 1px 1px 5px yellow;
+}
+
+.reviewSubmit:active {
+  border: 1px solid lightblue;
 }
 
 .singleReview {
@@ -769,6 +856,14 @@ ul {
 
 .nav ul a:hover {
   color: gray;
+}
+
+.nav ul a:focus {
+  text-shadow: 1px 1px 5px white;
+}
+
+.nav ul a:active {
+  border: 1px solid lightblue;
 }
 
 .credits {
