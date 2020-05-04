@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "73addf9f630f2b53ae6d644d05c9cfb2",
+    "revision": "4a095bfb2fbdd28e48061296d607bed1",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "e003185b31c0ab12ae5e",
+    "revision": "7766272810904c6c2a5c",
     "url": "/miguel-cabrera-project-5/static/css/main.c3f5b5f4.chunk.css"
   },
   {
-    "revision": "6919967f1bde74f71a54",
-    "url": "/miguel-cabrera-project-5/static/js/2.c64f3d21.chunk.js"
+    "revision": "fbf788c31ffb7e2a4d69",
+    "url": "/miguel-cabrera-project-5/static/js/2.922bf297.chunk.js"
   },
   {
     "revision": "21d6b61128df164bc1aa77feff23b023",
-    "url": "/miguel-cabrera-project-5/static/js/2.c64f3d21.chunk.js.LICENSE.txt"
+    "url": "/miguel-cabrera-project-5/static/js/2.922bf297.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "e003185b31c0ab12ae5e",
-    "url": "/miguel-cabrera-project-5/static/js/main.b75ec733.chunk.js"
+    "revision": "7766272810904c6c2a5c",
+    "url": "/miguel-cabrera-project-5/static/js/main.1c6f488b.chunk.js"
   },
   {
     "revision": "13fe450e6be4a5124201",
@@ -64,6 +64,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/media/hank2.c0475d10.mp3"
   },
   {
+    "revision": "4e59064305dd600bb1365f847f5fff3d",
+    "url": "/miguel-cabrera-project-5/static/media/hank3.4e590643.mp3"
+  },
+  {
+    "revision": "edcd7c0c053be70c220a204d976a1941",
+    "url": "/miguel-cabrera-project-5/static/media/hank4.edcd7c0c.mp3"
+  },
+  {
     "revision": "e0d189cf1c655298698da8a18e31bc98",
     "url": "/miguel-cabrera-project-5/static/media/hector2.e0d189cf.mp3"
   },
@@ -74,6 +82,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "bace2a06bd4195a3d026eda5f3b76d88",
     "url": "/miguel-cabrera-project-5/static/media/introSong.bace2a06.mp3"
+  },
+  {
+    "revision": "bd44b8cc82af723859a518be663b0169",
+    "url": "/miguel-cabrera-project-5/static/media/jane3.bd44b8cc.mp3"
   },
   {
     "revision": "7cdac254ca5b48c0f710ddd337e0271b",
@@ -120,6 +132,14 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/media/marieSchrader.be05e69c.mp3"
   },
   {
+    "revision": "a8e2c0e7bacba0c4ad8300a9bf7fee10",
+    "url": "/miguel-cabrera-project-5/static/media/mike3.a8e2c0e7.mp3"
+  },
+  {
+    "revision": "d4ffebc319a12873b2d35885a9eaf856",
+    "url": "/miguel-cabrera-project-5/static/media/mike4.d4ffebc3.mp3"
+  },
+  {
     "revision": "4cc4b83e90ee3a653d2336d9a5527326",
     "url": "/miguel-cabrera-project-5/static/media/mikeEhrmantraut.4cc4b83e.mp3"
   },
@@ -164,12 +184,16 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/media/shows.2fc64bbc.mp3"
   },
   {
-    "revision": "5d86f3a190797cdd566f815c57dc5a6b",
-    "url": "/miguel-cabrera-project-5/static/media/skylarWhite1.5d86f3a1.mp3"
-  },
-  {
     "revision": "d4426974e25daa7f4027965e25072a99",
     "url": "/miguel-cabrera-project-5/static/media/skylarWhite2.d4426974.mp3"
+  },
+  {
+    "revision": "9b63e857a982decf4020bf7f581395de",
+    "url": "/miguel-cabrera-project-5/static/media/skyler3.9b63e857.mp3"
+  },
+  {
+    "revision": "a7a45b6a14b9553f64ea10e6bc65622b",
+    "url": "/miguel-cabrera-project-5/static/media/skyler4.a7a45b6a.mp3"
   },
   {
     "revision": "3fb52cb62f949b67c3db34913de789f1",
@@ -196,12 +220,24 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/miguel-cabrera-project-5/static/media/tuco3.97a24ca0.mp3"
   },
   {
-    "revision": "b89d8fb77780283ee558658809099187",
-    "url": "/miguel-cabrera-project-5/static/media/tucoSalamanca.b89d8fb7.mp3"
+    "revision": "c560b56a40e79665d7c16910af6d1297",
+    "url": "/miguel-cabrera-project-5/static/media/tuco4.c560b56a.mp3"
+  },
+  {
+    "revision": "91f79b0b430f3af26fce3325fe45251f",
+    "url": "/miguel-cabrera-project-5/static/media/tuco5.91f79b0b.mp3"
   },
   {
     "revision": "f3e4265a6eac2e2fa245e91ad8206c5e",
     "url": "/miguel-cabrera-project-5/static/media/waltJr.f3e4265a.mp3"
+  },
+  {
+    "revision": "2a0beac4588b63951515d9289bb630a9",
+    "url": "/miguel-cabrera-project-5/static/media/waltJr3.2a0beac4.mp3"
+  },
+  {
+    "revision": "69475e7fdd370e1d6a8a1f51d21c79c2",
+    "url": "/miguel-cabrera-project-5/static/media/waltJr4.69475e7f.mp3"
   },
   {
     "revision": "6aad5958e94146e8deb0ead2cdb769fe",
@@ -210,10 +246,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "c41cab0bbd5004c5740403416ee5723a",
     "url": "/miguel-cabrera-project-5/static/media/walter3.c41cab0b.mp3"
-  },
-  {
-    "revision": "b8a617ad460773b917d0458d1f42730b",
-    "url": "/miguel-cabrera-project-5/static/media/walterJr.b8a617ad.mp3"
   },
   {
     "revision": "3540cc39cde05536eeea38f6485daa29",
