@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 import './MediaQueries.css';
+import './Setup.css';
 import Particles from 'react-particles-js';
 import intro from './assets/introSong.mp3';
+
 
 class Header extends Component {
 

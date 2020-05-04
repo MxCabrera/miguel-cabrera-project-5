@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './MediaQueries.css';
+import './Setup.css';
 import firebase from './firebase';
 // import Moment from 'moment'
 

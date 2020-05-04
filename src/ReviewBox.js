@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './MediaQueries.css';
+import './Setup.css';
 import firebase from './firebase';
 import Review from './Review';
 
@@ -12,7 +13,6 @@ class ReviewBox extends Component {
       this.state = {
          review: [],
          userInput: '',
-         userNumber: 0
       };
    };
    // componentDidMount to initialize firebase, storing it in a variable

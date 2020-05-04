@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import './MediaQueries.css';
+import './Setup.css';
 
 function Aside() {
    return (
