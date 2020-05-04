@@ -139,7 +139,7 @@ class App extends Component {
   scrollUp = () => {
     window.scrollTo(0,800);
   };
-
+  // function when clicked scrolls webpage to the bottom
   scrollDown = () => {
     window.scrollTo(0,99999);
   };
@@ -181,7 +181,9 @@ class App extends Component {
               <div className="arrow2" onClick={this.scrollDown}></div>
             </div>
           <div className="wrapper flex space">
+
             {/* sound board section  */}
+
             {/* className that contains ternary operator that changes between two classes */}
             <span className={this.state.endpoint1 ? "flex" : "displayNone"}>
               <div className="badSounds">
@@ -274,6 +276,7 @@ class App extends Component {
             </span>
 
 
+
             {/* deaths endpoint section */}
             {/* ternary operator to determine if user wants to see this section if not, display none */}
             <div className={this.state.endpoint2 ? "logo" : "displayNone"}>
@@ -308,6 +311,7 @@ class App extends Component {
                 })}
               </div>
             </div>
+
 
 
             {/* seasons endpoint section */}
