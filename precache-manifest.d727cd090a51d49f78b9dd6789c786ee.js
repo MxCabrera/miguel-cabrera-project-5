@@ -1,23 +1,23 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "603b16ecdf3faa10c9c44862046bff78",
+    "revision": "73addf9f630f2b53ae6d644d05c9cfb2",
     "url": "/miguel-cabrera-project-5/index.html"
   },
   {
-    "revision": "b35505811760ac4b0766",
-    "url": "/miguel-cabrera-project-5/static/css/main.82b6ee90.chunk.css"
+    "revision": "e003185b31c0ab12ae5e",
+    "url": "/miguel-cabrera-project-5/static/css/main.c3f5b5f4.chunk.css"
   },
   {
-    "revision": "ac428c1a17470f65d7dc",
-    "url": "/miguel-cabrera-project-5/static/js/2.44548b9a.chunk.js"
+    "revision": "6919967f1bde74f71a54",
+    "url": "/miguel-cabrera-project-5/static/js/2.c64f3d21.chunk.js"
   },
   {
     "revision": "21d6b61128df164bc1aa77feff23b023",
-    "url": "/miguel-cabrera-project-5/static/js/2.44548b9a.chunk.js.LICENSE.txt"
+    "url": "/miguel-cabrera-project-5/static/js/2.c64f3d21.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "b35505811760ac4b0766",
-    "url": "/miguel-cabrera-project-5/static/js/main.0133f184.chunk.js"
+    "revision": "e003185b31c0ab12ae5e",
+    "url": "/miguel-cabrera-project-5/static/js/main.b75ec733.chunk.js"
   },
   {
     "revision": "13fe450e6be4a5124201",
@@ -26,10 +26,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "248448bd7c93aeebb3adc572a959793a",
     "url": "/miguel-cabrera-project-5/static/media/Hank.248448bd.mp3"
-  },
-  {
-    "revision": "3795f66d4a869a7faeb4b425446daf33",
-    "url": "/miguel-cabrera-project-5/static/media/breakingBad1.3795f66d.png"
   },
   {
     "revision": "a2f79e7e171874e129fd133156895b55",
