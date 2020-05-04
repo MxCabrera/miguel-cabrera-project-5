@@ -1,17 +1,17 @@
 {
   "files": {
     "main.css": "/miguel-cabrera-project-5/static/css/main.c3f5b5f4.chunk.css",
-    "main.js": "/miguel-cabrera-project-5/static/js/main.1c6f488b.chunk.js",
-    "main.js.map": "/miguel-cabrera-project-5/static/js/main.1c6f488b.chunk.js.map",
+    "main.js": "/miguel-cabrera-project-5/static/js/main.a664516f.chunk.js",
+    "main.js.map": "/miguel-cabrera-project-5/static/js/main.a664516f.chunk.js.map",
     "runtime-main.js": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js",
     "runtime-main.js.map": "/miguel-cabrera-project-5/static/js/runtime-main.09b83635.js.map",
-    "static/js/2.922bf297.chunk.js": "/miguel-cabrera-project-5/static/js/2.922bf297.chunk.js",
-    "static/js/2.922bf297.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.922bf297.chunk.js.map",
+    "static/js/2.0b2450ce.chunk.js": "/miguel-cabrera-project-5/static/js/2.0b2450ce.chunk.js",
+    "static/js/2.0b2450ce.chunk.js.map": "/miguel-cabrera-project-5/static/js/2.0b2450ce.chunk.js.map",
     "index.html": "/miguel-cabrera-project-5/index.html",
-    "precache-manifest.9ec1eb6a4a83ec1cf1d716dcdddc8276.js": "/miguel-cabrera-project-5/precache-manifest.9ec1eb6a4a83ec1cf1d716dcdddc8276.js",
+    "precache-manifest.ff6760ff2560ee746f6557d70c09548c.js": "/miguel-cabrera-project-5/precache-manifest.ff6760ff2560ee746f6557d70c09548c.js",
     "service-worker.js": "/miguel-cabrera-project-5/service-worker.js",
     "static/css/main.c3f5b5f4.chunk.css.map": "/miguel-cabrera-project-5/static/css/main.c3f5b5f4.chunk.css.map",
-    "static/js/2.922bf297.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.922bf297.chunk.js.LICENSE.txt",
+    "static/js/2.0b2450ce.chunk.js.LICENSE.txt": "/miguel-cabrera-project-5/static/js/2.0b2450ce.chunk.js.LICENSE.txt",
     "static/media/Hank.mp3": "/miguel-cabrera-project-5/static/media/Hank.248448bd.mp3",
     "static/media/App.css": "/miguel-cabrera-project-5/static/media/paper.4b332359.jpg",
     "static/media/domingo2.mp3": "/miguel-cabrera-project-5/static/media/domingo2.6aae599a.mp3",
@@ -70,8 +70,8 @@
   },
   "entrypoints": [
     "static/js/runtime-main.09b83635.js",
-    "static/js/2.922bf297.chunk.js",
+    "static/js/2.0b2450ce.chunk.js",
     "static/css/main.c3f5b5f4.chunk.css",
-    "static/js/main.1c6f488b.chunk.js"
+    "static/js/main.a664516f.chunk.js"
   ]
 }
