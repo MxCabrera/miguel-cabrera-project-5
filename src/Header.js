@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './MediaQueries.css';
-import Particles from 'react-particles-js'
-import Logo from './assets/breakingBad1.png';
+import Particles from 'react-particles-js';
 import intro from './assets/introSong.mp3';
 
 class Header extends Component {
@@ -49,7 +48,6 @@ class Header extends Component {
                 }}/>
                     <div className="wrapper">
                         <h1 className="headerTitle">Breaking down the Bad</h1>
-                        {/* <img src={Logo} alt="Breaking Bad Logo"/> */}
                         <h2 className="headerD">The Informational Sound Board Generator </h2>
                         {/* initial start button that calls badStart function when clicked */}
                         <button className="headerButton" onClick={this.badStart}>Play Me</button>

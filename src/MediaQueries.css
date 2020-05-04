@@ -1,4 +1,7 @@
-@media (max-width: 1400px){
+@media (max-width: 1300px){
+   .actorSound {
+      background-position: 50% 91%;
+   }
 }
 
 /******** 1260 px  ********/
@@ -17,6 +20,9 @@
    .intro {
       font-size: 5rem;
       line-height: 4.7rem;
+   }
+   .actorSound {
+      background-position: 50% 80%;
    }
 
    /* season section styles */
@@ -217,8 +223,14 @@
       margin-bottom: -8rem;
       margin-left: -1rem;
    }
+   .actorSound {
+      background-position: 50% 72%;
+   }
    .characterBox {
       padding: 0.7rem;
+   }
+   .infoBox h2 {
+      font-size: 1.2rem;
    }
    img {
       height: 220px;
@@ -382,6 +394,7 @@
 
    .actorSound {
       width: 45%;
+      background-position: 50% 90%;
    }
    .headerButton {
       font-size: 1.3rem;

@@ -17,7 +17,7 @@ function Aside() {
             </div>
          <h3 className="credits">Breaking Bad is owned by Vince Gilligan & AMC Networks. Data from the Breaking Bad API was used to create this App. Photos and audio files are owned by there respective creators. Project 5 submission for Juno College.</h3>
       </aside>
-   )
-}
+   );
+};
 
 export default Aside;

@@ -7,7 +7,7 @@
 
 
 body {
-  background-image: linear-gradient(#0f3e0f, rgb(26, 80, 42), #29773E, #31864f, #063305);
+  background-image: linear-gradient(#1a501a, rgb(26, 80, 42), rgb(38, 129, 62), #31864f, #063305);
   font-size: 62.5%;
 }
 
@@ -142,7 +142,7 @@ main,
 
 
 .intro {
-  text-shadow: 1px 1px 18px rgb(255, 255, 255);
+  text-shadow: 1px 1px 10px rgb(255, 255, 255);
   /* text-decoration: underline; */
   color: rgb(12, 12, 12);
   margin: 2.5rem auto ;
@@ -535,7 +535,7 @@ img {
   transform: rotate(357deg);
   margin: 0 auto;
   padding: 1rem;
-  width: 45%;
+  width: 60%;
 }
 
 .titleDiv,
@@ -674,7 +674,7 @@ img {
 .reviewBox {
   background-color: rgb(255, 255, 255);
   box-shadow: 2px 2px 20px #000;
-  margin: 8.5rem auto;
+  margin: 10.5rem auto;
   padding: 2rem;
   z-index: 1;
 }
@@ -682,6 +682,10 @@ img {
 .reviewBox,
 .reviewInput {
   width: 80%; 
+}
+
+.reviewInput {
+  margin-top: 1rem;
 }
 
 .reviewTitle {

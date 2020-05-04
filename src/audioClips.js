@@ -1,12 +1,12 @@
 // audio imports 
 import walter from './assets/walterWhite1.mp3';
 import walter2 from './assets/walter2.mp3';
-import walter3 from './assets/walter3.mp3'
+import walter3 from './assets/walter3.mp3';
 import jesse from './assets/jessePinkman2.mp3';
 import jesse2 from './assets/jessePinkman3.mp3';
 import jesse3 from './assets/jesse3.mp3';
 import hank from './assets/Hank.mp3';
-import hank2 from './assets/hank2.mp3'
+import hank2 from './assets/hank2.mp3';
 import gus2 from './assets/gus2.mp3';
 import gus3 from './assets/gus3.mp3';
 import gus4 from './assets/gus4.mp3'
@@ -143,6 +143,6 @@ const audioClips = {
    quote: 'Pen and paper', 
    link: 'https://en.wikipedia.org/wiki/Krysten_Ritter'
 }
-}
+};
 
 export default audioClips;

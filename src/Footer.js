@@ -10,8 +10,8 @@ class Footer extends Component {
           <p>Copyright © 2020 by Miguel Cabrera</p>
             </div>
         </footer>
-    )
-  }
-}
+    );
+  };
+};
 
 export default Footer;

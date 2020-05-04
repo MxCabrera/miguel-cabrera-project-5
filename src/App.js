@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import './MediaQueries.css';
-import { Howl, Howler } from 'howler'
+import { Howl, Howler } from 'howler';
 import Header from './Header';
 import Footer from './Footer';
 import Aside from './Aside'
@@ -11,7 +11,7 @@ import audioClips from './audioClips';
 import ReviewBox from './ReviewBox';
 import gunshot from './assets/salamanca.mp3';
 import shows from './assets/shows.mp3';
-import soundboard from './assets/soundboard.mp3'
+import soundboard from './assets/soundboard.mp3';
 
 class App extends Component {
   // the birthing of the lifecycle, creation of state
@@ -34,23 +34,25 @@ class App extends Component {
     };
   };
 
+
   // calling getApiData immediately when the component mounts on DOM
   componentDidMount() {
     this.getApiData();
-  }
+  };
+
 
   // function that uses axios to grab information from selected API
   getApiData = () => {
     // storing the API url endpoints into separate variables
-    let characters =`https://www.breakingbadapi.com/api/characters?limit=16`
-    let quotes = `https://www.breakingbadapi.com/api/quotes/`
-    let death = `https://www.breakingbadapi.com/api/deaths/`
-    let episodes = `https://www.breakingbadapi.com/api/episodes/`
+    let characters =`https://www.breakingbadapi.com/api/characters?limit=16`;
+    let quotes = `https://www.breakingbadapi.com/api/quotes/`;
+    let death = `https://www.breakingbadapi.com/api/deaths/`;
+    let episodes = `https://www.breakingbadapi.com/api/episodes/`;
     // using axios.get with each url variable and storing it
     const requestOne = axios.get(characters);
     const requestTwo = axios.get(quotes);
     const requestThree = axios.get(death);
-    const requestFour = axios.get(episodes)
+    const requestFour = axios.get(episodes);
     // using axios.all to grab all requests in an array, and then spreading it into individual objects.
     axios.all([requestOne, requestTwo, requestThree, requestFour]).then(axios.spread((...responses) => {
       // taking the spread array, and storing the individual items into variable
@@ -65,12 +67,13 @@ class App extends Component {
         quoteArray: [infoTwo],
         deathArray: [infoThree],
         epArray: [infoFour]
-      })
+      });
     })).catch(errors => {
       // check to see if the axios call failed
-      console.log(errors, 'it didnt work!')
-    })
-  }
+      console.log(errors, 'it didnt work!');
+    });
+  };
+
 
 
   // function that takes info passed from onClick and randomly chooses a mp3 file from array of audio
@@ -80,25 +83,25 @@ class App extends Component {
     // grabbing a random mp3 file from array and storing it
     const random = characterSounds[Math.floor(Math.random() * characterSounds.length)];
     // calling function with randomly chosen mp3 file
-    this.BadSounds(random)
-  }
+    this.BadSounds(random);
+  };
 
   // function that takes the audio file that's randomly chosen, store it in state, and play it
   BadSounds = (src) => {
-    // if this.state.soundStorage is true, undefined is equal to false, so if theres a sound already in there, stop it. If theres something inside sound storage (in this case its the clicked sound), it is no longer undefined(false) its true, and since its asking if this.state.soundStorage is true then it will stop it
+    // if statement that checks state to see if its undefined, if its not then stop the content
     if (this.state.soundStorage) {
-      this.state.soundStorage.stop()
-    }
-    // sound variable containing howler.js library that create an object with parameter passed from onClick.
+      this.state.soundStorage.stop();
+    };
+    // sound variable containing howler.js library that create an object with parameter passed from onClick
     const sound = new Howl({
       src
     });
     // changing state property - pushing sound variable into soundStorage (intially undefined)
     this.setState({
       soundStorage: sound
-    })
+    });
     // playing the audio file in DOM.
-    sound.play()
+    sound.play();
   };
   
   // when called plays audio file and changes state to show selected sections
@@ -115,31 +118,31 @@ class App extends Component {
         endpoint3: !this.state.endpoint3, 
         endpoint1: false, 
         endpoint2: false,
-      })
+      });
     } else if ( src === soundboard) {
       this.setState({
         endpoint1 : !this.state.endpoint1, 
         endpoint2: false, 
         endpoint3: false
-      })
+      });
     } else if (src === gunshot) {
       this.setState({
         endpoint2: !this.state.endpoint2, 
         endpoint1: false, 
         endpoint3: false
-      })
-    }
-  }
+      });
+    };
+  };
 
 
   // function when clicked scrolls web page to the top
   scrollUp = () => {
-    window.scrollTo(0,800)
-  }
+    window.scrollTo(0,800);
+  };
 
   scrollDown = () => {
-    window.scrollTo(0,99999)
-  }
+    window.scrollTo(0,99999);
+  };
 
 
   render(){
@@ -172,27 +175,27 @@ class App extends Component {
             >Deaths</button>
           </div>
 
-          <div class="sticky">
+          <div className="sticky">
             <div className="arrows">
-              <div class="arrow1" onClick={this.scrollUp}></div>
-              <div class="arrow2" onClick={this.scrollDown}></div>
+              <div className="arrow1" onClick={this.scrollUp}></div>
+              <div className="arrow2" onClick={this.scrollDown}></div>
             </div>
           <div className="wrapper flex space">
             {/* sound board section  */}
             {/* className that contains ternary operator that changes between two classes */}
             <span className={this.state.endpoint1 ? "flex" : "displayNone"}>
-              <div class="badSounds">
+              <div className="badSounds">
                 <h2 className="mainTitle">Bad Sounds</h2>
                 <h3 className="remix">Remix</h3>
               </div>
               <div className="flex">
             {/* mapping charArray from state and display the data*/}
-            {this.state.charArray.map((allBadInfo, index)=>{
+            {this.state.charArray.map((allBadInfo)=>{
               // containing map parameter in variable
               const results = allBadInfo.data
               return(
                 // mapping results variable to get into another level 
-                results.map((deeper)=>{
+                results.map((deeper, index)=>{
                   return(
                     // sound board character cards begin here
                     // div contains onClick that calls function to start audio functions. This connected my audioClips.js array to the mapped information from the API
@@ -208,9 +211,9 @@ class App extends Component {
                             <p className="characterInfo"><span className="infoStats">Birthday:</span> {deeper.birthday}</p>
                             <p className="characterInfo"><span className="infoStats">Actor:</span><a href={audioClips[deeper.name].link}> {deeper.portrayed}</a> </p>
                             <p className="characterInfo"><span className="infoStats">Occupation:</span></p>
-                            {deeper.occupation.map((occupation)=>{
+                            {deeper.occupation.map((occupation, i)=>{
                               return(
-                                <p className="characterInfo"> {occupation} </p>
+                                <p key={i} className="characterInfo"> {occupation} </p>
                               )
                             })}
                             <p className="characterInfo"><span className="infoStats">Health Statue:</span> {deeper.status}</p>
@@ -222,15 +225,15 @@ class App extends Component {
                         <span className="pin">O</span>
                       </li>
                     </div>
-                  )
+                  );
                 })
-              )
-            })}
+              );
+            })};
 
 
 
             {/* Quote endpoint section */}
-            <div className="quoteBox">
+            <aside className="quoteBox">
               <h2 className="quoteTop">Guess who said it?!</h2>    
               {/* mapping quoteArray from state and displaying data     */}
               {this.state.quoteArray.map((quoteStuff)=>{
@@ -238,25 +241,25 @@ class App extends Component {
                 const quoteResults = quoteStuff.data
                 return(
                   // mapping another level further to get access to info
-                  quoteResults.map((singleQuote)=>{
+                  quoteResults.map((singleQuote, i)=>{
                     // if statement that request the specific quotes to show to DOM
                     if(singleQuote.quote_id <= '9' && singleQuote.quote_id >= '7') {
                       return(
                         // small quiz section on DOM
-                        <div className="quoteQuestions">
+                        <div key={i} className="quoteQuestions">
                         <h2>"{singleQuote.quote}"</h2>
                         <div className={ this.state.isAnswerShowing ? "displayNone" : "quizChoices"}>
-                          <label for="quotes1"><input type="radio" id="quotez1" name="quiz1"/> Saul Goodman</label>
-                          <label for="quotes2"><input type="radio" id="quotez2" name="quiz2" /> Jesse Pinkman</label>
-                          <label for="quotes3"><input type="radio" id="quotez3" name="quiz3" /> Walter White</label>
+                          <label htmlFor="quotes1"><input type="radio" id="quotez1" name="quiz1"/> Saul Goodman</label>
+                          <label htmlFor="quotes2"><input type="radio" id="quotez2" name="quiz2" /> Jesse Pinkman</label>
+                          <label htmlFor="quotes3"><input type="radio" id="quotez3" name="quiz3" /> Walter White</label>
                         </div>
                         {/* ternary operator to determine when user want to see the answers revealed (currently display: none)  */}
                         <h3 className={ this.state.isAnswerShowing ? "quoteAnswers" : "displayNone"}>Answer: {singleQuote.author}</h3>
                         </div>
-                      )
-                    }
+                      );
+                    };
                   })
-                  )
+                  );
                 })}
                 {/* button when clicked, changes the state so that it is the opposite of original value to display answers */}
                 <button 
@@ -266,7 +269,7 @@ class App extends Component {
                   this.setState({
                     isAnswerShowing: !this.state.isAnswerShowing
                   })}}>Click here to find out</button>
-              </div>
+              </aside>
               </div>
             </span>
 
@@ -285,10 +288,10 @@ class App extends Component {
                   const deathResults = deathStuff.data
                   return (
                     // mapped variable to get to next level of info
-                    deathResults.map((singleDeath) => {
+                    deathResults.map((singleDeath, i) => {
                       return (
                         // death section displayed on DOM
-                        <div className="BscDiv">
+                        <div key={i} className="BscDiv">
                           <h3 className="deathInfoT"> <span className="whoDied">{singleDeath.death}</span></h3>
                           <p className="deathInfo">Cause of Death:</p>
                           <p className="showTitle">{singleDeath.cause}</p>
@@ -334,21 +337,21 @@ class App extends Component {
                   let tvResults = tvStuff.data
                   return(
                     // mapped variable to get to next level on info
-                    tvResults.map((singleEp)=>{
+                    tvResults.map((singleEp, i)=>{
                       // if statement to check if the series is breaking bad, return these values.
                       if (singleEp.series === 'Breaking Bad'){
                         return(
                           <>
                             {/* ternary operator to change between classes if user request it. */}
-                            <div className={this.state.isBadThere ? "BBDiv" : 'displayNone'}>
+                            <div key={i} className={this.state.isBadThere ? "BBDiv" : 'displayNone'}>
                               <h2 className="infoEp">Season: {singleEp.season}, Episode #{singleEp.episode}</h2>
                               <p className="showTitle">Title: {singleEp.title}</p>
                               <p className="infoShow">Release Date: </p>
                               <p className="showTitle">{singleEp.air_date}</p>
                               <p className="infoShow"> Characters Involved:</p>
-                              {singleEp.characters.map((characters) => {
+                              {singleEp.characters.map((characters, i) => {
                                 return (
-                                  <p className="showTitle">- {characters}</p>
+                                  <p key={i} className="showTitle">- {characters}</p>
                                 )
                               })}
                             </div>
@@ -364,18 +367,18 @@ class App extends Component {
                               <p className="infoShow">Release Date: </p>
                               <p className="showTitle">{singleEp.air_date}</p>
                               <p className="infoShow"> Characters Involved:</p>
-                              {singleEp.characters.map((characters)=>{
+                              {singleEp.characters.map((characters, i)=>{
                                 return(
-                                  <p className="showTitle">- {characters}</p>
-                                )
-                              })}
+                                  <p key={i} className="showTitle">- {characters}</p>
+                                );
+                              })};
                             </div>
                           </>
-                        )
-                      }
+                        );
+                      };
                     })
-                  )
-                })}
+                  );
+                })};
               </div>
             </div>
             {/* onclick that calls scroll up function to guide users webpage to top of page */}
