@@ -15,7 +15,7 @@ class Header extends Component {
         this.audio = new Audio(intro);
         this.audio.volume = 0.1;
         // scroll down 800px
-        window.scrollTo(0, 600);
+        window.scrollTo(0, 660);
         // play audio 
         this.audio.play();
     };
