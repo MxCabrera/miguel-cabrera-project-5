@@ -112,26 +112,38 @@ class App extends Component {
     this.audio.play();
     // is src === the import file, then change state to show section.
     if (src === shows) {
-      this.setState({
-        //state values to be opposite of current value
-        // set state of the related property value to false
-        // user will see clicked section only
-        endpoint3: !this.state.endpoint3, 
-        endpoint1: false, 
-        endpoint2: false,
-      });
+      if (this.state.endpoint3 === true) {
+        console.log('nope');
+      } else { 
+        this.setState({
+          //state values to be opposite of current value
+          // set state of the related property value to false
+          // user will see clicked section only
+          endpoint3: !this.state.endpoint3, 
+          endpoint1: false, 
+          endpoint2: false,
+        });
+      }
     } else if ( src === soundboard) {
-      this.setState({
-        endpoint1 : !this.state.endpoint1, 
-        endpoint2: false, 
-        endpoint3: false
-      });
+      if (this.state.endpoint1 === true) {
+        console.log('nope');
+      } else { 
+        this.setState({
+          endpoint1 : !this.state.endpoint1, 
+          endpoint2: false, 
+          endpoint3: false
+        });
+      }
     } else if (src === gunshot) {
-      this.setState({
-        endpoint2: !this.state.endpoint2, 
-        endpoint1: false, 
-        endpoint3: false
-      });
+      if (this.state.endpoint2 === true) {
+        console.log('nope');
+      } else { 
+        this.setState({
+          endpoint2: !this.state.endpoint2, 
+          endpoint1: false, 
+          endpoint3: false
+        });
+      }
     };
   };
 
