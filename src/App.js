@@ -108,6 +108,7 @@ class App extends Component {
   playSection = (src) => {
     this.audio = new Audio(src);
     // play audio 
+    this.audio.volume = 0.2;
     this.audio.play();
     // is src === the import file, then change state to show section.
     if (src === shows) {
@@ -178,7 +179,7 @@ class App extends Component {
           <div className="sticky">
             <div className="arrows">
               <div className="arrow1" onClick={this.scrollUp}></div>
-              <div className="arrow2" onClick={this.scrollDown}></div>
+              <a href="#revi"><div className="arrow2" onClick={this.scrollDown}></div></a>
             </div>
           <div className="wrapper flex space">
 
